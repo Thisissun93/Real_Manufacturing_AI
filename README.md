@@ -1,4 +1,5 @@
-# Smart Process Analytics Platform
+★ Smart Process Analytics Platform
+# Process Stability Monitoring
 ## Background
 ### 한국어
 제조 현장에서는 제품군(Model), 제품양(LOT)가 증가할수록 공정 이상을 식별하기 어려워진다.
@@ -7,3 +8,16 @@
 ### English
 In manufacturing, the more the product lines (Models) and quantities (LOTs) increase, the harder it is to spot process abnormalities.
 This project was created to automatically generate SPC and lot trends using Python and to detect process abnormalities early.
+
+## Feature
+✔ CSV Import
+✔ Lot Trend
+✔ SPC
+✔ Outlier Detection
+✔ Report
+
+## Tech
+✔ Python
+✔ Pandas
+✔ Matplotlib
+✔ Openpyx1
