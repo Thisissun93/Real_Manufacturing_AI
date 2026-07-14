@@ -1,3 +1,4 @@
+# I used Jupyter Lab, which is a free app.
 pandas
 numpy
 matplotlib
