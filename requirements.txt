@@ -7,3 +7,4 @@ streamlit>=1.49.0
 shap>=0.48.0
 joblib>=1.5.0
 openpyxl>=3.1.5
+pytest>=7.4.0
