@@ -7,6 +7,7 @@ import time
 
 PIPELINE_MODULES = [
     ("Generate Process Data", "src.data.generate_process_data"),
+    ("Update SQLite Database", "src.database.create_database"),
     ("Validate Process Data", "src.data.loader"),
     ("Generate Trend Analysis", "src.analysis.trend"),
     ("Generate SPC Analysis", "src.analysis.spc"),
@@ -25,19 +26,20 @@ def get_project_root() -> Path:
     return Path(__file__).resolve().parents[2]
 
 
-def write_log(message: str) -> None:
-    project_root = get_project_root()
-    report_dir = project_root / "report"
+def get_log_path() -> Path:
+    report_dir = get_project_root() / "report"
     report_dir.mkdir(parents=True, exist_ok=True)
 
-    log_path = report_dir / "pipeline.log"
+    return report_dir / "pipeline.log"
 
+
+def write_log(message: str) -> None:
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     log_message = f"[{timestamp}] {message}"
 
     print(log_message)
 
-    with log_path.open(
+    with get_log_path().open(
         "a",
         encoding="utf-8",
     ) as log_file:
@@ -52,9 +54,7 @@ def run_module(
     separator = "=" * 70
 
     write_log(separator)
-    write_log(
-        f"STEP {step_number:02d} START: {step_name}"
-    )
+    write_log(f"STEP {step_number:02d} START: {step_name}")
     write_log(f"Module: {module_name}")
 
     start_time = time.perf_counter()
@@ -78,25 +78,17 @@ def run_module(
         print(process.stdout)
 
     if process.returncode != 0:
-        write_log(
-            f"STEP {step_number:02d} FAILED: {step_name}"
-        )
+        write_log(f"STEP {step_number:02d} FAILED: {step_name}")
 
         if process.stderr.strip():
             print(process.stderr)
 
-        write_log(
-            f"Elapsed Time: {elapsed_time:.2f} seconds"
-        )
+        write_log(f"Elapsed Time: {elapsed_time:.2f} seconds")
 
         return False
 
-    write_log(
-        f"STEP {step_number:02d} COMPLETED: {step_name}"
-    )
-    write_log(
-        f"Elapsed Time: {elapsed_time:.2f} seconds"
-    )
+    write_log(f"STEP {step_number:02d} COMPLETED: {step_name}")
+    write_log(f"Elapsed Time: {elapsed_time:.2f} seconds")
 
     return True
 
