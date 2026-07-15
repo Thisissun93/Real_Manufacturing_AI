@@ -280,8 +280,7 @@ streamlit run src/dashboard/app.py
 
 Streamlit Cloud
 
-https://YOUR-STREAMLIT-URL.streamlit.app
-
+https://realmanufacturingai-gqmhke2ybcjhdrsndjsh2e.streamlit.app/
 ---
 
 # ✅ Continuous Integration
