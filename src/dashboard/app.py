@@ -15,25 +15,6 @@ st.set_page_config(
 )
 
 
-FEATURES = [
-    "CZ_Concentration",
-    "CZ_Roughness",
-    "Press1_Temp",
-    "Press1_Time",
-    "Press1_Pressure",
-    "Press2_Temp",
-    "Press2_Time",
-    "Press2_Pressure",
-    "Press3_Temp",
-    "Press3_Time",
-    "Press3_Pressure",
-    "Cure_Temp",
-    "Cure_Time",
-    "Anneal_Time",
-    "Anneal_Temp",
-]
-
-
 @st.cache_data
 def load_data() -> pd.DataFrame:
     return load_process_data()
@@ -142,25 +123,10 @@ def show_summary(df: pd.DataFrame) -> None:
 
     column1, column2, column3, column4 = st.columns(4)
 
-    column1.metric(
-        "Total LOTs",
-        f"{total_lots:,}",
-    )
-
-    column2.metric(
-        "Defect LOTs",
-        f"{defect_lots:,}",
-    )
-
-    column3.metric(
-        "Defect Rate",
-        f"{defect_rate:.2f}%",
-    )
-
-    column4.metric(
-        "Average Yield",
-        f"{average_yield:.2f}%",
-    )
+    column1.metric("Total LOTs", f"{total_lots:,}")
+    column2.metric("Defect LOTs", f"{defect_lots:,}")
+    column3.metric("Defect Rate", f"{defect_rate:.2f}%")
+    column4.metric("Average Yield", f"{average_yield:.2f}%")
 
 
 def show_yield_trend(df: pd.DataFrame) -> None:
@@ -252,7 +218,6 @@ def show_correlation(df: pd.DataFrame) -> None:
         return
 
     numeric_df = df.select_dtypes(include="number")
-
     correlation = numeric_df.corr()
 
     st.dataframe(
@@ -283,7 +248,7 @@ def create_input_value(feature: str) -> float:
 
 
 def show_defect_prediction() -> None:
-    st.subheader("Defect Prediction")
+    st.subheader("Single LOT Defect Prediction")
 
     try:
         model_package = load_model_package()
@@ -367,10 +332,173 @@ def show_defect_prediction() -> None:
         hide_index=True,
     )
 
-    st.write("입력한 공정 조건")
+
+def validate_batch_columns(
+    df: pd.DataFrame,
+    required_features: list[str],
+) -> list[str]:
+    return [
+        feature
+        for feature in required_features
+        if feature not in df.columns
+    ]
+
+
+def predict_batch(
+    df: pd.DataFrame,
+    model_package: dict,
+) -> pd.DataFrame:
+    model = model_package["model"]
+    features = model_package["features"]
+    classes = model_package["classes"]
+
+    input_x = df[features]
+
+    predictions = model.predict(input_x)
+    probabilities = model.predict_proba(input_x)
+
+    result_df = df.copy()
+    result_df["Predicted_Defect"] = predictions
+
+    probability_columns = []
+
+    for class_index, class_name in enumerate(classes):
+        column_name = f"Probability_{class_name}_%"
+        probability_columns.append(column_name)
+
+        result_df[column_name] = (
+            probabilities[:, class_index] * 100
+        ).round(3)
+
+    result_df["Max_Probability_%"] = (
+        result_df[probability_columns]
+        .max(axis=1)
+        .round(3)
+    )
+
+    result_df["Prediction_Status"] = result_df[
+        "Predicted_Defect"
+    ].apply(
+        lambda value: (
+            "Normal"
+            if value == "Normal"
+            else "Defect Risk"
+        )
+    )
+
+    return result_df
+
+
+def show_batch_prediction() -> None:
+    st.subheader("Batch CSV Prediction")
+
+    try:
+        model_package = load_model_package()
+    except FileNotFoundError as error:
+        st.error(str(error))
+        return
+
+    uploaded_file = st.file_uploader(
+        "예측할 CSV 파일을 업로드하세요.",
+        type=["csv"],
+    )
+
+    if uploaded_file is None:
+        st.info(
+            "모델 학습에 사용한 공정 입력 컬럼이 포함된 CSV가 필요합니다."
+        )
+        return
+
+    try:
+        upload_df = pd.read_csv(uploaded_file)
+    except Exception as error:
+        st.error(f"CSV 파일을 읽을 수 없습니다: {error}")
+        return
+
+    if upload_df.empty:
+        st.error("업로드한 CSV 파일이 비어 있습니다.")
+        return
+
+    required_features = model_package["features"]
+
+    missing_columns = validate_batch_columns(
+        upload_df,
+        required_features,
+    )
+
+    if missing_columns:
+        st.error(
+            "예측에 필요한 컬럼이 누락되었습니다:\n"
+            f"{missing_columns}"
+        )
+        return
+
+    st.write("업로드 데이터 미리보기")
 
     st.dataframe(
-        input_df.T.rename(columns={0: "Input_Value"}),
+        upload_df.head(20),
+        use_container_width=True,
+        hide_index=True,
+    )
+
+    if not st.button(
+        "Run Batch Prediction",
+        use_container_width=True,
+    ):
+        return
+
+    result_df = predict_batch(
+        upload_df,
+        model_package,
+    )
+
+    total_rows = len(result_df)
+    defect_rows = (
+        result_df["Predicted_Defect"] != "Normal"
+    ).sum()
+    defect_rate = defect_rows / total_rows * 100
+    average_probability = result_df[
+        "Max_Probability_%"
+    ].mean()
+
+    column1, column2, column3, column4 = st.columns(4)
+
+    column1.metric("Predicted LOTs", f"{total_rows:,}")
+    column2.metric("Defect Risk LOTs", f"{defect_rows:,}")
+    column3.metric("Defect Risk Rate", f"{defect_rate:.2f}%")
+    column4.metric(
+        "Average Confidence",
+        f"{average_probability:.2f}%",
+    )
+
+    prediction_counts = (
+        result_df["Predicted_Defect"]
+        .value_counts()
+        .rename_axis("Predicted_Defect")
+        .reset_index(name="Count")
+    )
+
+    st.bar_chart(
+        prediction_counts.set_index("Predicted_Defect")
+    )
+
+    st.dataframe(
+        result_df,
+        use_container_width=True,
+        hide_index=True,
+        height=500,
+    )
+
+    csv_data = result_df.to_csv(
+        index=False,
+        encoding="utf-8-sig",
+    ).encode("utf-8-sig")
+
+    st.download_button(
+        label="Download Prediction Result",
+        data=csv_data,
+        file_name="batch_prediction_result.csv",
+        mime="text/csv",
         use_container_width=True,
     )
 
@@ -392,9 +520,10 @@ def show_lot_detail(df: pd.DataFrame) -> None:
 def main() -> None:
     st.title("Manufacturing AI Dashboard")
 
-    dashboard_tab, prediction_tab = st.tabs([
+    dashboard_tab, single_prediction_tab, batch_prediction_tab = st.tabs([
         "Process Dashboard",
-        "Defect Prediction",
+        "Single Prediction",
+        "Batch CSV Prediction",
     ])
 
     with dashboard_tab:
@@ -427,8 +556,11 @@ def main() -> None:
         st.divider()
         show_lot_detail(filtered_df)
 
-    with prediction_tab:
+    with single_prediction_tab:
         show_defect_prediction()
+
+    with batch_prediction_tab:
+        show_batch_prediction()
 
 
 if __name__ == "__main__":
