@@ -11,6 +11,7 @@ from sklearn.metrics import (
 )
 from sklearn.model_selection import train_test_split
 
+from src.config import CONFIG
 from src.data.loader import load_process_data
 
 
@@ -34,25 +35,27 @@ FEATURES = [
 
 TARGET = "Defect"
 
-RANDOM_STATE = 42
-TEST_SIZE = 0.2
+RANDOM_STATE = CONFIG["data"]["random_state"]
+TEST_SIZE = CONFIG["model"]["test_size"]
+N_ESTIMATORS = CONFIG["model"]["n_estimators"]
 
 
-def main() -> None:
-    project_root = Path(__file__).resolve().parents[2]
+def get_project_root() -> Path:
+    return Path(__file__).resolve().parents[2]
 
-    model_dir = project_root / "models"
-    model_dir.mkdir(parents=True, exist_ok=True)
 
-    report_dir = project_root / "report"
-    report_dir.mkdir(parents=True, exist_ok=True)
-
-    df = load_process_data()
-
+def prepare_data(
+    df: pd.DataFrame,
+) -> tuple[
+    pd.DataFrame,
+    pd.DataFrame,
+    pd.Series,
+    pd.Series,
+]:
     x = df[FEATURES]
     y = df[TARGET]
 
-    x_train, x_test, y_train, y_test = train_test_split(
+    return train_test_split(
         x,
         y,
         test_size=TEST_SIZE,
@@ -60,8 +63,13 @@ def main() -> None:
         stratify=y,
     )
 
+
+def train_model(
+    x_train: pd.DataFrame,
+    y_train: pd.Series,
+) -> RandomForestClassifier:
     model = RandomForestClassifier(
-        n_estimators=300,
+        n_estimators=N_ESTIMATORS,
         random_state=RANDOM_STATE,
         class_weight="balanced",
         n_jobs=-1,
@@ -69,39 +77,65 @@ def main() -> None:
 
     model.fit(x_train, y_train)
 
-    prediction = model.predict(x_test)
-    probability = model.predict_proba(x_test)
+    return model
 
-    accuracy = accuracy_score(y_test, prediction)
 
-    print("=" * 60)
-    print("Random Forest Model Training")
-    print("=" * 60)
-    print(f"Train rows: {len(x_train):,}")
-    print(f"Test rows: {len(x_test):,}")
-    print(f"Accuracy: {accuracy:.4f}")
-    print()
-    print(classification_report(y_test, prediction))
+def save_model_package(
+    model: RandomForestClassifier,
+) -> Path:
+    model_dir = get_project_root() / "models"
+    model_dir.mkdir(parents=True, exist_ok=True)
 
-    model_path = model_dir / "random_forest_defect_model.joblib"
+    model_path = (
+        model_dir
+        / "random_forest_defect_model.joblib"
+    )
 
     model_package = {
         "model": model,
         "features": FEATURES,
         "target": TARGET,
         "classes": model.classes_.tolist(),
+        "config": {
+            "random_state": RANDOM_STATE,
+            "test_size": TEST_SIZE,
+            "n_estimators": N_ESTIMATORS,
+        },
     }
 
-    joblib.dump(model_package, model_path)
+    joblib.dump(
+        model_package,
+        model_path,
+    )
+
+    return model_path
+
+
+def save_prediction_report(
+    x_test: pd.DataFrame,
+    y_test: pd.Series,
+    prediction,
+    probability,
+    model: RandomForestClassifier,
+) -> tuple[Path, Path]:
+    report_dir = get_project_root() / "report"
+    report_dir.mkdir(parents=True, exist_ok=True)
 
     result_df = x_test.copy()
     result_df["Actual_Defect"] = y_test.values
     result_df["Predicted_Defect"] = prediction
 
-    for index, class_name in enumerate(model.classes_):
-        result_df[f"Probability_{class_name}"] = probability[:, index]
+    for class_index, class_name in enumerate(
+        model.classes_
+    ):
+        result_df[
+            f"Probability_{class_name}"
+        ] = probability[:, class_index]
 
-    prediction_path = report_dir / "model_test_predictions.csv"
+    prediction_path = (
+        report_dir
+        / "model_test_predictions.csv"
+    )
 
     result_df.to_csv(
         prediction_path,
@@ -115,15 +149,79 @@ def main() -> None:
             prediction,
             labels=model.classes_,
         ),
-        index=[f"Actual_{name}" for name in model.classes_],
-        columns=[f"Predicted_{name}" for name in model.classes_],
+        index=[
+            f"Actual_{class_name}"
+            for class_name in model.classes_
+        ],
+        columns=[
+            f"Predicted_{class_name}"
+            for class_name in model.classes_
+        ],
     )
 
-    confusion_path = report_dir / "confusion_matrix.csv"
+    confusion_path = (
+        report_dir
+        / "confusion_matrix.csv"
+    )
 
     confusion_df.to_csv(
         confusion_path,
         encoding="utf-8-sig",
+    )
+
+    return prediction_path, confusion_path
+
+
+def main() -> None:
+    df = load_process_data()
+
+    x_train, x_test, y_train, y_test = (
+        prepare_data(df)
+    )
+
+    model = train_model(
+        x_train,
+        y_train,
+    )
+
+    prediction = model.predict(x_test)
+    probability = model.predict_proba(x_test)
+
+    accuracy = accuracy_score(
+        y_test,
+        prediction,
+    )
+
+    model_path = save_model_package(model)
+
+    prediction_path, confusion_path = (
+        save_prediction_report(
+            x_test=x_test,
+            y_test=y_test,
+            prediction=prediction,
+            probability=probability,
+            model=model,
+        )
+    )
+
+    print("=" * 60)
+    print("Random Forest Model Training")
+    print("=" * 60)
+    print(f"Train Rows: {len(x_train):,}")
+    print(f"Test Rows: {len(x_test):,}")
+    print(f"Random State: {RANDOM_STATE}")
+    print(f"Test Size: {TEST_SIZE}")
+    print(f"N Estimators: {N_ESTIMATORS}")
+    print(f"Accuracy: {accuracy:.4f}")
+    print()
+
+    print("Classification Report")
+    print(
+        classification_report(
+            y_test,
+            prediction,
+            zero_division=0,
+        )
     )
 
     print(f"모델 저장: {model_path}")
