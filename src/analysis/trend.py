@@ -3,7 +3,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import pandas as pd
 
-from data.loader import load_process_data
+from src.data.loader import load_process_data
 
 
 TREND_COLUMNS = [
