@@ -7,6 +7,10 @@ from matplotlib.backends.backend_pdf import PdfPages
 
 from src.data.loader import load_process_data
 from src.process_spec import PROCESS_SPEC
+from src.report.process_recommendation import (
+    create_process_recommendation_page,
+    save_recommendation_csv,
+)
 
 
 ROLLING_WINDOW = 50
@@ -511,13 +515,13 @@ def create_pdf_report(
         report_dir
         / "manufacturing_process_analysis_report.pdf"
     )
-
     with PdfPages(output_path) as pdf:
         create_executive_summary_page(pdf, df)
         create_yield_trend_page(pdf, df)
         create_defect_page(pdf, df)
         create_machine_page(pdf, df)
         create_capability_page(pdf, df)
+        create_process_recommendation_page(pdf, df)
         create_quality_summary_page(pdf, df)
 
         metadata = pdf.infodict()
@@ -534,13 +538,18 @@ def create_pdf_report(
 
 def main() -> None:
     process_df = load_process_data()
+
     output_path = create_pdf_report(process_df)
+
+    recommendation_path = save_recommendation_csv(
+        process_df
+    )
 
     print("=" * 60)
     print("PDF Report Generated")
     print("=" * 60)
-    print(f"저장 위치: {output_path}")
-
+    print(f"PDF 저장 위치: {output_path}")
+    print(f"추천 결과 저장 위치: {recommendation_path}")
 
 if __name__ == "__main__":
     main()
