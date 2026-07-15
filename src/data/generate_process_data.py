@@ -3,7 +3,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from process_spec import PROCESS_PARAMETERS, PROCESS_SPEC
+from src.process_spec import PROCESS_PARAMETERS, PROCESS_SPEC
 
 
 RANDOM_SEED = 42
@@ -164,7 +164,7 @@ def generate_process_data(sample_size: int = SAMPLE_SIZE) -> pd.DataFrame:
 
 
 def save_process_data(df: pd.DataFrame) -> Path:
-    project_root = Path(__file__).resolve().parent.parent
+    project_root = Path(__file__).resolve().parents[2]
     output_path = project_root / "Data" / "process_monitoring_data.csv"
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
