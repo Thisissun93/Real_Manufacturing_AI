@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.inspection import permutation_importance
 from sklearn.metrics import accuracy_score, classification_report
 from sklearn.model_selection import train_test_split
 
@@ -31,7 +32,16 @@ FEATURES = [
 TARGET = "Defect"
 
 
-def main() -> None:
+def main():
+
+    project_root = Path(__file__).resolve().parents[2]
+
+    image_dir = project_root / "images"
+    image_dir.mkdir(exist_ok=True)
+
+    report_dir = project_root / "report"
+    report_dir.mkdir(exist_ok=True)
+
     df = load_process_data()
 
     X = df[FEATURES]
@@ -57,12 +67,13 @@ def main() -> None:
 
     accuracy = accuracy_score(y_test, pred)
 
-    print(f"Accuracy: {accuracy:.4f}")
-    print()
-    print("Classification Report")
+    print("=" * 60)
+    print(f"Accuracy : {accuracy:.4f}")
+    print("=" * 60)
+
     print(classification_report(y_test, pred))
 
-    feature_importance = pd.DataFrame({
+    rf_importance = pd.DataFrame({
         "Feature": FEATURES,
         "Importance": model.feature_importances_,
     }).sort_values(
@@ -70,33 +81,72 @@ def main() -> None:
         ascending=False,
     )
 
-    print()
-    print("Feature Importance")
-    print(feature_importance)
+    print("\nRandom Forest Feature Importance")
+    print(rf_importance)
 
-    project_root = Path(__file__).resolve().parents[2]
-    image_dir = project_root / "images"
-    image_dir.mkdir(parents=True, exist_ok=True)
+    result = permutation_importance(
+        model,
+        X_test,
+        y_test,
+        n_repeats=20,
+        random_state=42,
+    )
 
-    plt.figure(figsize=(10, 7))
+    perm_importance = pd.DataFrame({
+        "Feature": FEATURES,
+        "Importance": result.importances_mean,
+    }).sort_values(
+        by="Importance",
+        ascending=False,
+    )
+
+    print("\nPermutation Importance")
+    print(perm_importance)
+
+    perm_importance.to_csv(
+        report_dir / "feature_importance.csv",
+        index=False,
+        encoding="utf-8-sig",
+    )
+
+    plt.figure(figsize=(10,7))
+
     plt.barh(
-        feature_importance["Feature"],
-        feature_importance["Importance"],
+        perm_importance["Feature"],
+        perm_importance["Importance"],
     )
 
     plt.gca().invert_yaxis()
-    plt.title("Random Forest Feature Importance")
+
+    plt.title("Permutation Feature Importance")
+
     plt.xlabel("Importance")
-    plt.ylabel("Feature")
+
     plt.tight_layout()
 
-    output_path = image_dir / "random_forest_feature_importance.png"
-    plt.savefig(output_path, dpi=150, bbox_inches="tight")
+    plt.savefig(
+        image_dir / "permutation_feature_importance.png",
+        dpi=150,
+        bbox_inches="tight",
+    )
+
     plt.show()
+
     plt.close()
 
-    print(f"저장 완료: {output_path}")
+    print("\nTop 5 Important Features")
+
+    print(perm_importance.head())
+
+    print("\nCSV 저장 완료")
+
+    print(report_dir / "feature_importance.csv")
+
+    print("\n그래프 저장 완료")
+
+    print(image_dir / "permutation_feature_importance.png")
 
 
 if __name__ == "__main__":
     main()
+    
