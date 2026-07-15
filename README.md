@@ -74,19 +74,19 @@ Streamlit Dashboard
 
 ## Single LOT Prediction
 
-*(Add Screenshot)*(images/single_prediction.png)
+![Single LOT Prediction](images/single_prediction.png)
 
 ---
 
 ## Batch Prediction
 
-*(Add Screenshot)*(images/batch_prediction.png)
+![Batch Prediction](images/batch_prediction.png)
 
 ---
 
 ## PDF Report
 
-*(Add Screenshot)*(images/pdf_report.png)
+![PDF Report](images/pdf_report.png)
 
 ---
 
