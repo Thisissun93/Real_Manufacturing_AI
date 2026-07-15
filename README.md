@@ -1,6 +1,7 @@
 # 🚀 Manufacturing AI Dashboard
 
 - GitHub Actions 기반 자동 테스트 및 전체 Pipeline 검증
+
 A Manufacturing AI Platform for Semiconductor Process Monitoring, SPC Analysis, Machine Learning, Defect Prediction, and Interactive Dashboard.
 
 ---
