@@ -1,4 +1,5 @@
 from pathlib import Path
+import sqlite3
 
 import pandas as pd
 
@@ -8,6 +9,7 @@ REQUIRED_COLUMNS = [
     "Model",
     "Machine",
     "CZ_Concentration",
+    "CZ_Roughness",
     "Press1_Temp",
     "Press1_Time",
     "Press1_Pressure",
@@ -21,7 +23,6 @@ REQUIRED_COLUMNS = [
     "Cure_Time",
     "Anneal_Time",
     "Anneal_Temp",
-    "CZ_Roughness",
     "Total_Thickness",
     "Peel_Strength",
     "ABF_Roughness",
@@ -31,111 +32,157 @@ REQUIRED_COLUMNS = [
 ]
 
 
-def get_data_path() -> Path:
-    """프로젝트의 공정 데이터 파일 경로를 반환합니다."""
-    project_root = Path(__file__).resolve().parents[2]
-    return project_root / "Data" / "process_monitoring_data.csv"
+def get_project_root() -> Path:
+    return Path(__file__).resolve().parents[2]
 
 
-def load_process_data(file_path: Path | None = None) -> pd.DataFrame:
-    """CSV 파일을 불러오고 기본 유효성을 검사합니다."""
-    path = file_path or get_data_path()
+def get_database_path() -> Path:
+    return (
+        get_project_root()
+        / "database"
+        / "manufacturing_ai.db"
+    )
 
-    if not path.exists():
+
+def get_csv_path() -> Path:
+    return (
+        get_project_root()
+        / "Data"
+        / "process_monitoring_data.csv"
+    )
+
+
+def load_from_database() -> pd.DataFrame:
+    database_path = get_database_path()
+
+    if not database_path.exists():
         raise FileNotFoundError(
-            f"데이터 파일을 찾을 수 없습니다: {path}\n"
-            "먼저 generate_process_data.py를 실행하세요."
+            f"데이터베이스가 없습니다: {database_path}"
         )
 
-    df = pd.read_csv(path)
+    with sqlite3.connect(database_path) as connection:
+        table_check_query = """
+        SELECT name
+        FROM sqlite_master
+        WHERE type = 'table'
+          AND name = 'process_data'
+        """
 
-    if df.empty:
-        raise ValueError("데이터가 비어 있습니다.")
+        table_exists = pd.read_sql_query(
+            table_check_query,
+            connection,
+        )
 
-    missing_columns = [
-        column for column in REQUIRED_COLUMNS if column not in df.columns
-    ]
+        if table_exists.empty:
+            raise ValueError(
+                "데이터베이스에 process_data 테이블이 없습니다."
+            )
 
-    if missing_columns:
-        raise ValueError(
-            f"필수 컬럼이 누락되었습니다: {missing_columns}"
+        df = pd.read_sql_query(
+            "SELECT * FROM process_data",
+            connection,
         )
 
     return df
 
 
-def print_data_summary(df: pd.DataFrame) -> None:
-    """데이터의 구조와 품질을 요약 출력합니다."""
-    print("=" * 60)
-    print("1. 데이터 크기")
-    print("=" * 60)
-    print(f"행 수: {len(df):,}")
-    print(f"열 수: {len(df.columns)}")
+def load_from_csv() -> pd.DataFrame:
+    csv_path = get_csv_path()
 
-    print("\n" + "=" * 60)
-    print("2. 컬럼 목록")
-    print("=" * 60)
-    for index, column in enumerate(df.columns, start=1):
-        print(f"{index:02d}. {column}")
+    if not csv_path.exists():
+        raise FileNotFoundError(
+            f"CSV 파일이 없습니다: {csv_path}"
+        )
 
-    print("\n" + "=" * 60)
-    print("3. 결측치")
-    print("=" * 60)
-    missing = df.isna().sum()
-    missing = missing[missing > 0]
+    return pd.read_csv(csv_path)
 
-    if missing.empty:
-        print("결측치 없음")
-    else:
-        print(missing)
 
-    print("\n" + "=" * 60)
-    print("4. 중복 LOT_ID")
-    print("=" * 60)
+def validate_process_data(
+    df: pd.DataFrame,
+) -> pd.DataFrame:
+    if df.empty:
+        raise ValueError("불러온 데이터가 비어 있습니다.")
+
+    missing_columns = [
+        column
+        for column in REQUIRED_COLUMNS
+        if column not in df.columns
+    ]
+
+    if missing_columns:
+        raise ValueError(
+            "필수 컬럼이 누락되었습니다:\n"
+            f"{missing_columns}"
+        )
+
     duplicated_lots = df["LOT_ID"].duplicated().sum()
-    print(f"중복 LOT 수: {duplicated_lots:,}")
 
-    print("\n" + "=" * 60)
-    print("5. Defect 분포")
+    if duplicated_lots > 0:
+        raise ValueError(
+            f"중복 LOT_ID가 {duplicated_lots:,}개 있습니다."
+        )
+
+    return df
+
+
+def load_process_data(
+    source: str = "database",
+) -> pd.DataFrame:
+    """
+    제조 데이터를 불러옵니다.
+
+    source:
+        database : SQLite에서 조회
+        csv      : CSV에서 조회
+        auto     : SQLite 우선, 없으면 CSV 사용
+    """
+
+    if source == "database":
+        df = load_from_database()
+
+    elif source == "csv":
+        df = load_from_csv()
+
+    elif source == "auto":
+        try:
+            df = load_from_database()
+        except (FileNotFoundError, ValueError):
+            df = load_from_csv()
+
+    else:
+        raise ValueError(
+            "source는 'database', 'csv', 'auto' 중 하나여야 합니다."
+        )
+
+    return validate_process_data(df)
+
+
+def print_data_summary(
+    df: pd.DataFrame,
+) -> None:
     print("=" * 60)
-    defect_summary = df["Defect"].value_counts(dropna=False)
-    defect_ratio = (
-        df["Defect"]
-        .value_counts(normalize=True, dropna=False)
-        .mul(100)
-        .round(2)
+    print("Process Data Summary")
+    print("=" * 60)
+    print(f"Rows: {len(df):,}")
+    print(f"Columns: {len(df.columns):,}")
+    print(f"Missing Values: {df.isna().sum().sum():,}")
+    print(f"Duplicated LOTs: {df['LOT_ID'].duplicated().sum():,}")
+    print()
+
+    print("Defect Distribution")
+    print(df["Defect"].value_counts())
+    print()
+
+    print(f"Average Yield: {df['Yield'].mean():.3f}")
+
+
+def main() -> None:
+    process_df = load_process_data(
+        source="database",
     )
 
-    defect_table = pd.DataFrame({
-        "Count": defect_summary,
-        "Ratio_%": defect_ratio,
-    })
-    print(defect_table)
-
-    print("\n" + "=" * 60)
-    print("6. Yield 요약")
-    print("=" * 60)
-    print(df["Yield"].describe().round(3))
-
-    print("\n" + "=" * 60)
-    print("7. 주요 품질 인자 요약")
-    print("=" * 60)
-    quality_columns = [
-        "CZ_Roughness",
-        "Total_Thickness",
-        "Peel_Strength",
-        "ABF_Roughness",
-        "Delam_Panel_Count",
-        "Yield",
-    ]
-    print(df[quality_columns].describe().round(3).T)
-
-    print("\n" + "=" * 60)
-    print("8. 데이터 샘플")
-    print("=" * 60)
-    print(df.head())
+    print_data_summary(process_df)
 
 
 if __name__ == "__main__":
-    process_df = load_process_data()
-    print_data_summary(process_df)
+    main()
