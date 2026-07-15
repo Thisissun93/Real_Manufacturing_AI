@@ -1,6 +1,6 @@
 # 🚀 Manufacturing AI Dashboard
 
-[![CI](https://github.com/Thisissun93/Real_Manufacturing_AI/actions/workflows/manufacturing_ai.yml/badge.svg)](https://github.com/Thisissun93/Real_Manufacturing_AI/actions/workflows/manufacturing_ai.yml)
+[![Manufacturing AI CI](https://github.com/Thisissun93/Real_Manufacturing_AI/actions/workflows/manufacturing_ai.yml/badge.svg?branch=main)](https://github.com/Thisissun93/Real_Manufacturing_AI/actions/workflows/manufacturing_ai.yml)
 
 A Manufacturing AI Platform for Semiconductor Process Monitoring, SPC Analysis, Machine Learning, Defect Prediction, and Interactive Dashboard.
 
