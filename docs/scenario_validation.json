@@ -1,0 +1,223 @@
+{
+  "scope": "작성된 합성 시나리오 수용 검증. 현장 원인 진단 정확도·독립 외부 검증 아님.",
+  "passed": 27,
+  "total": 27,
+  "checks": [
+    {
+      "seed": 721,
+      "lot": "DEMO-0045",
+      "case": "약액 상태 변화",
+      "expected": "우선 확인",
+      "observed": "우선 확인",
+      "passed": true
+    },
+    {
+      "seed": 721,
+      "lot": "DEMO-0021",
+      "case": "밀착 압력·시간 이탈",
+      "expected": "우선 확인",
+      "observed": "우선 확인",
+      "passed": true
+    },
+    {
+      "seed": 721,
+      "lot": "DEMO-0046",
+      "case": "Cure 제품 온도 이탈",
+      "expected": "우선 확인",
+      "observed": "우선 확인",
+      "passed": true
+    },
+    {
+      "seed": 721,
+      "lot": "DEMO-0081",
+      "case": "약액·밀착 동시 이탈",
+      "expected": "우선 확인",
+      "observed": "우선 확인",
+      "passed": true
+    },
+    {
+      "seed": 721,
+      "lot": "DEMO-0085",
+      "case": "등록 조건 정상·불량 발생",
+      "expected": "현재 등록값에서 이탈 근거 없음",
+      "observed": "현재 등록값에서 이탈 근거 없음",
+      "passed": true
+    },
+    {
+      "seed": 721,
+      "lot": "DEMO-0089",
+      "case": "밀착 이탈·AOI PASS 반례",
+      "expected": "우선 확인",
+      "observed": "우선 확인",
+      "passed": true
+    },
+    {
+      "seed": 721,
+      "lot": "DEMO-0066",
+      "case": "Cu 시편 기록 누락",
+      "expected": "판단 보류",
+      "observed": "판단 보류",
+      "passed": true
+    },
+    {
+      "seed": 721,
+      "lot": "DEMO-0069",
+      "case": "계측 편향·AOI PASS 반례",
+      "expected": "우선 확인",
+      "observed": "우선 확인",
+      "passed": true
+    },
+    {
+      "seed": 721,
+      "lot": "DEMO-0093",
+      "case": "동일 자재·다른 설비 불량",
+      "expected": "우선 확인",
+      "observed": "우선 확인",
+      "passed": true
+    },
+    {
+      "seed": 991,
+      "lot": "DEMO-0045",
+      "case": "약액 상태 변화",
+      "expected": "우선 확인",
+      "observed": "우선 확인",
+      "passed": true
+    },
+    {
+      "seed": 991,
+      "lot": "DEMO-0021",
+      "case": "밀착 압력·시간 이탈",
+      "expected": "우선 확인",
+      "observed": "우선 확인",
+      "passed": true
+    },
+    {
+      "seed": 991,
+      "lot": "DEMO-0046",
+      "case": "Cure 제품 온도 이탈",
+      "expected": "우선 확인",
+      "observed": "우선 확인",
+      "passed": true
+    },
+    {
+      "seed": 991,
+      "lot": "DEMO-0081",
+      "case": "약액·밀착 동시 이탈",
+      "expected": "우선 확인",
+      "observed": "우선 확인",
+      "passed": true
+    },
+    {
+      "seed": 991,
+      "lot": "DEMO-0085",
+      "case": "등록 조건 정상·불량 발생",
+      "expected": "현재 등록값에서 이탈 근거 없음",
+      "observed": "현재 등록값에서 이탈 근거 없음",
+      "passed": true
+    },
+    {
+      "seed": 991,
+      "lot": "DEMO-0089",
+      "case": "밀착 이탈·AOI PASS 반례",
+      "expected": "우선 확인",
+      "observed": "우선 확인",
+      "passed": true
+    },
+    {
+      "seed": 991,
+      "lot": "DEMO-0066",
+      "case": "Cu 시편 기록 누락",
+      "expected": "판단 보류",
+      "observed": "판단 보류",
+      "passed": true
+    },
+    {
+      "seed": 991,
+      "lot": "DEMO-0069",
+      "case": "계측 편향·AOI PASS 반례",
+      "expected": "우선 확인",
+      "observed": "우선 확인",
+      "passed": true
+    },
+    {
+      "seed": 991,
+      "lot": "DEMO-0093",
+      "case": "동일 자재·다른 설비 불량",
+      "expected": "우선 확인",
+      "observed": "우선 확인",
+      "passed": true
+    },
+    {
+      "seed": 1823,
+      "lot": "DEMO-0045",
+      "case": "약액 상태 변화",
+      "expected": "우선 확인",
+      "observed": "우선 확인",
+      "passed": true
+    },
+    {
+      "seed": 1823,
+      "lot": "DEMO-0021",
+      "case": "밀착 압력·시간 이탈",
+      "expected": "우선 확인",
+      "observed": "우선 확인",
+      "passed": true
+    },
+    {
+      "seed": 1823,
+      "lot": "DEMO-0046",
+      "case": "Cure 제품 온도 이탈",
+      "expected": "우선 확인",
+      "observed": "우선 확인",
+      "passed": true
+    },
+    {
+      "seed": 1823,
+      "lot": "DEMO-0081",
+      "case": "약액·밀착 동시 이탈",
+      "expected": "우선 확인",
+      "observed": "우선 확인",
+      "passed": true
+    },
+    {
+      "seed": 1823,
+      "lot": "DEMO-0085",
+      "case": "등록 조건 정상·불량 발생",
+      "expected": "현재 등록값에서 이탈 근거 없음",
+      "observed": "현재 등록값에서 이탈 근거 없음",
+      "passed": true
+    },
+    {
+      "seed": 1823,
+      "lot": "DEMO-0089",
+      "case": "밀착 이탈·AOI PASS 반례",
+      "expected": "우선 확인",
+      "observed": "우선 확인",
+      "passed": true
+    },
+    {
+      "seed": 1823,
+      "lot": "DEMO-0066",
+      "case": "Cu 시편 기록 누락",
+      "expected": "판단 보류",
+      "observed": "판단 보류",
+      "passed": true
+    },
+    {
+      "seed": 1823,
+      "lot": "DEMO-0069",
+      "case": "계측 편향·AOI PASS 반례",
+      "expected": "우선 확인",
+      "observed": "우선 확인",
+      "passed": true
+    },
+    {
+      "seed": 1823,
+      "lot": "DEMO-0093",
+      "case": "동일 자재·다른 설비 불량",
+      "expected": "우선 확인",
+      "observed": "우선 확인",
+      "passed": true
+    }
+  ]
+}

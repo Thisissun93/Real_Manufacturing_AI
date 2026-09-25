@@ -524,6 +524,12 @@ def show_lot_detail(df: pd.DataFrame) -> None:
 
 
 def main() -> None:
+    mode = st.sidebar.radio("작업 선택", ["제조 이력 조사", "기존 통계·ML (학습용)"])
+    if mode == "제조 이력 조사":
+        from src.investigation.ui import render
+        render()
+        return
+    st.warning("기존 합성 데이터·무작위 분할 모델의 학습용 화면입니다. 실제 공정 불량 확률이나 원인으로 해석하지 마세요.")
     st.title("Manufacturing AI Dashboard")
 
     dashboard_tab, single_prediction_tab, batch_prediction_tab = st.tabs([
@@ -570,4 +576,6 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    st.navigation([st.Page(main,title="제조 이력 조사",default=True),
+                   st.Page("pages/4_PDF_Report.py",title="조사 보고서 PDF"),
+                   st.Page("pages/5_Pipeline_Control.py",title="시료 불출·수령 관리")]).run()

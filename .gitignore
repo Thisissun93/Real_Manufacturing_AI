@@ -30,3 +30,11 @@ Thumbs.db
 
 # Model cache
 *.joblib.bak
+# Local sample custody records: never commit
+instance/
+*.sqlite3
+*.sqlite3-*
+
+# Generated public fixtures can be downloaded from the app
+samples/investigation/demo.json
+samples/investigation/evaluation_truth.json
