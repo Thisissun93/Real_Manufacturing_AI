@@ -30,16 +30,16 @@ def find_spec_outliers(df: pd.DataFrame) -> pd.DataFrame:
 
     for column in CHECK_COLUMNS:
         spec = PROCESS_SPEC[column]
-        lcl = spec["lcl"]
-        ucl = spec["ucl"]
+        lsl = spec["lsl"]
+        usl = spec["usl"]
 
         mask = pd.Series(False, index=df.index)
 
-        if lcl is not None:
-            mask |= df[column] < lcl
+        if lsl is not None:
+            mask |= df[column] < lsl
 
-        if ucl is not None:
-            mask |= df[column] > ucl
+        if usl is not None:
+            mask |= df[column] > usl
 
         abnormal_df = df.loc[mask, ["LOT_ID", "Model", "Machine", column]].copy()
 
@@ -48,11 +48,11 @@ def find_spec_outliers(df: pd.DataFrame) -> pd.DataFrame:
 
         abnormal_df["Parameter"] = column
         abnormal_df["Value"] = abnormal_df[column]
-        abnormal_df["LCL"] = lcl
-        abnormal_df["UCL"] = ucl
+        abnormal_df["LSL"] = lsl
+        abnormal_df["USL"] = usl
 
         abnormal_df["Violation"] = abnormal_df["Value"].apply(
-            lambda value: classify_violation(value, lcl, ucl)
+            lambda value: classify_violation(value, lsl, usl)
         )
 
         outlier_records.append(
@@ -63,8 +63,8 @@ def find_spec_outliers(df: pd.DataFrame) -> pd.DataFrame:
                     "Machine",
                     "Parameter",
                     "Value",
-                    "LCL",
-                    "UCL",
+                    "LSL",
+                    "USL",
                     "Violation",
                 ]
             ]
@@ -78,8 +78,8 @@ def find_spec_outliers(df: pd.DataFrame) -> pd.DataFrame:
                 "Machine",
                 "Parameter",
                 "Value",
-                "LCL",
-                "UCL",
+                "LSL",
+                "USL",
                 "Violation",
             ]
         )
@@ -89,13 +89,13 @@ def find_spec_outliers(df: pd.DataFrame) -> pd.DataFrame:
 
 def classify_violation(
     value: float,
-    lcl: float | None,
-    ucl: float | None,
+    lsl: float | None,
+    usl: float | None,
 ) -> str:
-    if lcl is not None and value < lcl:
+    if lsl is not None and value < lsl:
         return "Below LCL"
 
-    if ucl is not None and value > ucl:
+    if usl is not None and value > usl:
         return "Above UCL"
 
     return "Normal"

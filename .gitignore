@@ -38,3 +38,9 @@ instance/
 # Generated public fixtures can be downloaded from the app
 samples/investigation/demo.json
 samples/investigation/evaluation_truth.json
+
+# 파이프라인 생성 산출물 (python -m src.pipeline.run_pipeline 으로 재생성)
+report/
+images/
+models/*.joblib
+Data/msa_*.csv

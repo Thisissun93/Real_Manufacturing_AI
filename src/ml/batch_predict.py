@@ -59,45 +59,53 @@ def predict_defects(
     df: pd.DataFrame,
     model_package: dict,
 ) -> pd.DataFrame:
+    """저장된 판정 임계값으로 불량 위험을 예측한다.
+
+    model.predict() 를 쓰지 않는 이유
+    --------------------------------
+    scikit-learn 의 predict() 는 확률 0.5 를 기준으로 판정한다.
+    불량률이 13% 수준인 공정에서 0.5 는 검출을 거의 포기하는 임계값이다.
+    학습 단계에서 목표 재현율로 결정한 임계값을 모델 패키지에 함께 저장했고,
+    추론에서도 그 값을 써야 학습 시 평가한 성능이 재현된다.
+    """
     model = model_package["model"]
     features = model_package["features"]
-    classes = model_package["classes"]
+
+    positive_label = model_package.get(
+        "positive_label", "Delamination"
+    )
+    threshold = float(
+        model_package.get("decision_threshold", 0.5)
+    )
 
     validate_features(df, features)
 
     input_x = df[features]
 
-    predicted_classes = model.predict(input_x)
-    predicted_probabilities = model.predict_proba(input_x)
+    defect_probability = model.predict_proba(input_x)[:, 1]
 
     result_df = df.copy()
-    result_df["Predicted_Defect"] = predicted_classes
 
-    for class_index, class_name in enumerate(classes):
-        result_df[f"Probability_{class_name}"] = (
-            predicted_probabilities[:, class_index] * 100
-        ).round(3)
+    result_df[f"Probability_{positive_label}_%"] = (
+        defect_probability * 100
+    ).round(3)
 
-    probability_columns = [
-        f"Probability_{class_name}"
-        for class_name in classes
+    result_df["Decision_Threshold_%"] = round(threshold * 100, 3)
+
+    is_flagged = defect_probability >= threshold
+
+    result_df["Predicted_Defect"] = [
+        positive_label if flag else "Normal" for flag in is_flagged
     ]
 
-    result_df["Max_Probability_%"] = (
-        result_df[probability_columns]
-        .max(axis=1)
-        .round(3)
-    )
+    result_df["Prediction_Status"] = [
+        "Defect Risk" if flag else "Normal" for flag in is_flagged
+    ]
 
-    result_df["Prediction_Status"] = result_df[
-        "Predicted_Defect"
-    ].apply(
-        lambda value: (
-            "Normal"
-            if value == "Normal"
-            else "Defect Risk"
-        )
-    )
+    # 임계값까지 남은 여유. 음수면 이미 임계값을 넘었다.
+    result_df["Margin_To_Threshold_%"] = (
+        (threshold - defect_probability) * 100
+    ).round(3)
 
     return result_df
 
@@ -129,19 +137,38 @@ def print_prediction_summary(
     print(f"예측 LOT 수: {len(prediction_df):,}")
 
     print()
-    print("예측 불량 분포")
-    print(
-        prediction_df["Predicted_Defect"]
-        .value_counts()
-    )
+    print("예측 판정 분포")
+    print(prediction_df["Predicted_Defect"].value_counts().to_string())
 
-    print()
-    print("평균 예측 확률")
-    print(
-        prediction_df["Max_Probability_%"]
-        .mean()
-        .round(3)
-    )
+    probability_columns = [
+        column
+        for column in prediction_df.columns
+        if column.startswith("Probability_")
+    ]
+
+    if probability_columns:
+        column = probability_columns[0]
+
+        print()
+        print(f"{column} 통계")
+        print(
+            prediction_df[column]
+            .describe()
+            .round(3)
+            .to_string()
+        )
+
+    if "Decision_Threshold_%" in prediction_df.columns:
+        threshold = prediction_df["Decision_Threshold_%"].iloc[0]
+        flagged = (
+            prediction_df["Prediction_Status"] == "Defect Risk"
+        ).sum()
+
+        print()
+        print(
+            f"판정 임계값 {threshold}% 적용 -> 의심 LOT "
+            f"{flagged:,}건 ({100 * flagged / len(prediction_df):.2f}%)"
+        )
 
 
 def main() -> None:

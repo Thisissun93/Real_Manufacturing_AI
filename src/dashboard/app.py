@@ -248,7 +248,7 @@ def create_input_value(feature: str) -> float:
         format="%.3f",
         help=(
             f"Target: {target} {spec['unit']} / "
-            f"LCL: {spec['lcl']} / UCL: {spec['ucl']}"
+            f"LSL: {spec['lsl']} / USL: {spec['usl']}"
         ),
     )
 

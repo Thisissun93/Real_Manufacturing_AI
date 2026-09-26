@@ -1,191 +1,450 @@
+"""SPC 분석과 관리도 작성.
+
+이전 버전에서 고친 것
+--------------------
+1. 관리한계를 전체 표준편차(mean +- 3 * std)로 계산하고 있었다.
+   전체 표준편차는 부분군 간 변동까지 포함하므로, 공정에 평균 이동이나
+   추세가 있으면 그 변동이 한계 폭을 넓혀 정작 검출해야 할 신호를 감춘다.
+   이번 버전은 이동범위로 부분군 내 변동을 추정한다.
+   sigma_hat = MR_bar / d2(2), UCL = X_bar + 2.660 * MR_bar
+
+2. 관리한계를 벗어난 점(Nelson 규칙 1)만 표시하고 있었다.
+   규칙 2~8 을 적용해 관리한계 안에서 진행되는 평균 이동, 추세,
+   층별 혼입을 검출한다.
+
+3. Cpk 만 계산하고 있었다. Cp, Cpk, Pp, Ppk 를 모두 계산한다.
+   Cp 와 Cpk 의 차이는 중심 이탈, Cp 와 Pp 의 차이는 부분군 간 변동이며
+   각각 필요한 조치가 다르다.
+
+4. 이미지 저장 경로가 src/images 로 잡혀 있었다.
+   Path(__file__).parent.parent 는 src 디렉터리다.
+   프로젝트 루트의 images 로 바로잡았다.
+
+5. 파이프라인 안에서 plt.show() 를 호출해 헤드리스 환경과 CI 에서 멈췄다.
+   제거했다.
+"""
+
 from pathlib import Path
+
+import matplotlib
+
+matplotlib.use("Agg")
 
 import matplotlib.pyplot as plt
 import pandas as pd
 
 from src.data.loader import load_process_data
-from src.process_spec import PROCESS_SPEC
+from src.process_spec import (
+    CAPABILITY_CHARACTERISTICS,
+    get_spec_limits,
+    get_unit,
+)
+from src.quality.capability import CapabilityResult, analyze_capability
+from src.quality.control_charts import (
+    ControlChart,
+    individual_moving_range_chart,
+)
+from src.quality.nelson_rules import (
+    RuleViolation,
+    evaluate_chart,
+    summarize_violations,
+)
 
 
-SPC_COLUMNS = [
-    "CZ_Roughness",
-    "Peel_Strength",
-    "ABF_Roughness",
-    "Total_Thickness",
-    "Yield",
-]
+SPC_COLUMNS = CAPABILITY_CHARACTERISTICS
+
+
+def get_project_root() -> Path:
+    return Path(__file__).resolve().parents[2]
 
 
 def get_image_directory() -> Path:
-    project_root = Path(__file__).resolve().parent.parent
-    image_dir = project_root / "images"
+    """이미지 저장 디렉터리.
+
+    이전 버전은 parents[1](= src)을 루트로 보아 src/images 에 저장했다.
+    """
+    image_dir = get_project_root() / "images"
     image_dir.mkdir(parents=True, exist_ok=True)
+
     return image_dir
 
 
-def calculate_control_limits(
-    series: pd.Series,
-) -> tuple[float, float, float]:
-    mean_value = series.mean()
-    std_value = series.std(ddof=1)
+def get_report_directory() -> Path:
+    report_dir = get_project_root() / "report"
+    report_dir.mkdir(parents=True, exist_ok=True)
 
-    ucl = mean_value + 3 * std_value
-    lcl = mean_value - 3 * std_value
-
-    return mean_value, lcl, ucl
+    return report_dir
 
 
-def calculate_cpk(
-    series: pd.Series,
-    lsl: float | None,
-    usl: float | None,
-) -> float | None:
-    mean_value = series.mean()
-    std_value = series.std(ddof=1)
+def analyze_characteristic(
+    dataframe: pd.DataFrame,
+    characteristic: str,
+) -> tuple[ControlChart, ControlChart, CapabilityResult, list[RuleViolation]]:
+    """단일 품질 특성의 관리도, 공정능력, 판정 규칙을 한 번에 계산한다."""
+    if characteristic not in dataframe.columns:
+        raise ValueError(
+            f"존재하지 않는 컬럼입니다: {characteristic}"
+        )
 
-    if std_value == 0:
-        return None
+    series = dataframe[characteristic]
 
-    cpu = None
-    cpl = None
+    individual_chart, moving_range_chart = (
+        individual_moving_range_chart(series)
+    )
 
-    if usl is not None:
-        cpu = (usl - mean_value) / (3 * std_value)
+    lower_spec, upper_spec = get_spec_limits(characteristic)
 
-    if lsl is not None:
-        cpl = (mean_value - lsl) / (3 * std_value)
+    capability = analyze_capability(
+        series=series,
+        characteristic=characteristic,
+        lower_spec=lower_spec,
+        upper_spec=upper_spec,
+    )
 
-    if cpu is not None and cpl is not None:
-        return min(cpu, cpl)
+    violations = evaluate_chart(individual_chart)
 
-    if cpu is not None:
-        return cpu
-
-    if cpl is not None:
-        return cpl
-
-    return None
+    return (
+        individual_chart,
+        moving_range_chart,
+        capability,
+        violations,
+    )
 
 
-def plot_spc_chart(
-    df: pd.DataFrame,
-    column: str,
+def plot_control_chart(
+    chart: ControlChart,
+    characteristic: str,
+    capability: CapabilityResult | None = None,
+    violations: list[RuleViolation] | None = None,
+    max_points: int = 600,
     save: bool = True,
 ) -> Path | None:
-    if column not in df.columns:
-        raise ValueError(f"존재하지 않는 컬럼입니다: {column}")
+    """관리도를 그린다.
 
-    series = df[column].dropna().reset_index(drop=True)
+    타점이 많으면 앞부분만 그린다. 8000점을 한 화면에 그리면
+    패턴이 보이지 않는다.
+    """
+    values = chart.values[:max_points]
+    zones = chart.sigma_zone_edges
 
-    mean_value, lcl, ucl = calculate_control_limits(series)
+    figure, axes = plt.subplots(figsize=(14, 6))
 
-    spec = PROCESS_SPEC[column]
-    spec_lcl = spec["lcl"]
-    spec_ucl = spec["ucl"]
-
-    cpk = calculate_cpk(
-        series=series,
-        lsl=spec_lcl,
-        usl=spec_ucl,
+    axes.plot(
+        range(len(values)),
+        values,
+        linewidth=0.8,
+        alpha=0.85,
+        marker="o",
+        markersize=2.2,
+        label=characteristic,
     )
 
-    outlier_mask = (series < lcl) | (series > ucl)
-    outlier_indices = series.index[outlier_mask]
-    outlier_values = series[outlier_mask]
-
-    x = range(len(series))
-
-    plt.figure(figsize=(14, 6))
-
-    plt.plot(
-        x,
-        series,
-        linewidth=0.7,
-        alpha=0.7,
-        label=column,
+    axes.axhline(
+        chart.center_line,
+        linewidth=1.3,
+        color="#1f6096",
+        label=f"CL {chart.center_line:.3f}",
     )
 
-    plt.axhline(
-        mean_value,
-        linestyle="-",
-        linewidth=1.2,
-        label=f"Mean: {mean_value:.2f}",
-    )
-
-    plt.axhline(
-        ucl,
-        linestyle="--",
-        linewidth=1.2,
-        label=f"UCL: {ucl:.2f}",
-    )
-
-    plt.axhline(
-        lcl,
-        linestyle="--",
-        linewidth=1.2,
-        label=f"LCL: {lcl:.2f}",
-    )
-
-    if spec_ucl is not None:
-        plt.axhline(
-            spec_ucl,
-            linestyle=":",
+    for bound, name in (
+        (chart.upper_limit, "UCL"),
+        (chart.lower_limit, "LCL"),
+    ):
+        axes.axhline(
+            bound,
+            linestyle="--",
             linewidth=1.2,
-            label=f"Spec UCL: {spec_ucl:.2f}",
+            color="#9c3038",
+            label=f"{name} {bound:.3f}",
         )
 
-    if spec_lcl is not None:
-        plt.axhline(
-            spec_lcl,
+    for edge_key in ("plus_1", "plus_2", "minus_1", "minus_2"):
+        axes.axhline(
+            zones[edge_key],
             linestyle=":",
-            linewidth=1.2,
-            label=f"Spec LCL: {spec_lcl:.2f}",
+            linewidth=0.7,
+            color="#9aa5b1",
         )
 
-    plt.scatter(
-        outlier_indices,
-        outlier_values,
-        s=18,
-        label=f"Outliers: {len(outlier_values)}",
-        zorder=3,
-    )
+    if capability is not None:
+        for spec_value, name in (
+            (capability.upper_spec, "USL"),
+            (capability.lower_spec, "LSL"),
+        ):
+            if spec_value is None:
+                continue
 
-    cpk_text = "N/A" if cpk is None else f"{cpk:.3f}"
+            axes.axhline(
+                spec_value,
+                linestyle="-.",
+                linewidth=1.1,
+                color="#a55f21",
+                label=f"{name} {spec_value:.3f}",
+            )
 
-    plt.title(f"{column} SPC Chart | Cpk: {cpk_text}")
-    plt.xlabel("LOT Sequence")
-    plt.ylabel(column)
-    plt.grid(True, alpha=0.3)
-    plt.legend()
-    plt.tight_layout()
+    if violations:
+        marked = [
+            violation
+            for violation in violations
+            if violation.start_index < len(values)
+        ]
+
+        for violation in marked[:60]:
+            axes.axvspan(
+                violation.start_index,
+                min(violation.end_index, len(values) - 1),
+                alpha=0.08,
+                color="#9c3038",
+            )
+
+    title = f"{characteristic} {chart.chart_type} Chart"
+
+    if capability is not None:
+        title += (
+            f"  |  Cp {_format(capability.cp)}"
+            f"  Cpk {_format(capability.cpk)}"
+            f"  Pp {_format(capability.pp)}"
+            f"  Ppk {_format(capability.ppk)}"
+        )
+
+    if violations:
+        title += f"  |  규칙 위반 {len(violations)}건"
+
+    axes.set_title(title, fontsize=11)
+    axes.set_xlabel(f"LOT 순서 (최대 {max_points}점)")
+    axes.set_ylabel(f"{characteristic} [{get_unit(characteristic)}]")
+    axes.grid(True, alpha=0.25)
+    axes.legend(fontsize=8, ncol=3, loc="best")
+
+    figure.tight_layout()
 
     output_path = None
 
     if save:
-        image_dir = get_image_directory()
-        output_path = image_dir / f"{column.lower()}_spc_chart.png"
-        plt.savefig(output_path, dpi=150, bbox_inches="tight")
+        output_path = (
+            get_image_directory()
+            / f"{characteristic.lower()}_{chart.chart_type.lower()}_chart.png"
+        )
+        figure.savefig(output_path, dpi=150, bbox_inches="tight")
 
-    plt.show()
-    plt.close()
-
-    print(f"{column}")
-    print(f"Mean: {mean_value:.3f}")
-    print(f"LCL: {lcl:.3f}")
-    print(f"UCL: {ucl:.3f}")
-    print(f"Cpk: {cpk_text}")
-    print(f"Outlier count: {len(outlier_values)}")
-    print("-" * 50)
+    plt.close(figure)
 
     return output_path
 
 
-def generate_all_spc_charts(df: pd.DataFrame) -> None:
-    for column in SPC_COLUMNS:
-        saved_path = plot_spc_chart(df, column)
-        print(f"저장 완료: {saved_path}")
+def _format(value: float | None) -> str:
+    return "N/A" if value is None else f"{value:.2f}"
+
+
+def print_characteristic_report(
+    characteristic: str,
+    capability: CapabilityResult,
+    violations: list[RuleViolation],
+) -> None:
+    """특성 1개의 분석 결과를 출력한다."""
+    print(f"[{characteristic}]  단위: {get_unit(characteristic)}")
+    print(
+        f"  규격      LSL {_format(capability.lower_spec)} / "
+        f"USL {_format(capability.upper_spec)}"
+    )
+    print(
+        f"  평균      {capability.mean:.4f}   "
+        f"sigma_within {capability.sigma_within:.4f}   "
+        f"sigma_overall {capability.sigma_overall:.4f}"
+    )
+    print(
+        f"  능력      Cp {_format(capability.cp)}  "
+        f"Cpk {_format(capability.cpk)}  "
+        f"Pp {_format(capability.pp)}  "
+        f"Ppk {_format(capability.ppk)}  "
+        f"-> {capability.verdict}"
+    )
+
+    if capability.expected_ppm_out_of_spec is not None:
+        print(
+            f"  규격이탈  실측 {capability.observed_out_of_spec_count}건 / "
+            f"추정 {capability.expected_ppm_out_of_spec:,.0f} ppm"
+        )
+
+    summary = summarize_violations(
+        violations,
+        point_count=capability.sample_size,
+    )
+
+    print(
+        f"  판정규칙  위반 {summary['total_violations']}건  "
+        f"종합 {summary['overall_severity']}"
+    )
+
+    if summary["by_rule"]:
+        expected = summary["expected_false_alarms"]
+        detail = ", ".join(
+            f"{rule.replace('NELSON_RULE_', 'R')}="
+            f"{count}(기대 {expected.get(rule, 0.0):.0f})"
+            for rule, count in sorted(summary["by_rule"].items())
+        )
+        print(f"            {detail}")
+
+    signal_rules = summary["signal_rules"]
+
+    if signal_rules:
+        for rule, stats in sorted(signal_rules.items()):
+            print(
+                f"            [신호] {rule.replace('NELSON_RULE_', '규칙 ')}: "
+                f"관측 {stats['observed']:.0f}건은 기대 오경보 "
+                f"{stats['expected']:.1f}건의 {stats['ratio']:.1f}배"
+            )
+    else:
+        print(
+            "            모든 규칙의 위반 건수가 관리상태 기대 오경보 "
+            "수준이다. 우연으로 설명된다."
+        )
+
+    print(f"  진단      {capability.diagnosis}")
+    print("-" * 74)
+
+
+def build_capability_table(
+    dataframe: pd.DataFrame,
+) -> pd.DataFrame:
+    """전체 특성의 공정능력 요약표를 만든다."""
+    rows: list[dict[str, object]] = []
+
+    for characteristic in SPC_COLUMNS:
+        if characteristic not in dataframe.columns:
+            continue
+
+        _, _, capability, violations = analyze_characteristic(
+            dataframe=dataframe,
+            characteristic=characteristic,
+        )
+
+        summary = summarize_violations(
+            violations,
+            point_count=capability.sample_size,
+        )
+
+        row = capability.to_dict()
+        row["nelson_violations"] = summary["total_violations"]
+        row["nelson_severity"] = summary["overall_severity"]
+
+        rows.append(row)
+
+    return pd.DataFrame(rows)
+
+
+def build_violation_table(
+    dataframe: pd.DataFrame,
+) -> pd.DataFrame:
+    """판정 규칙 위반 목록을 만든다.
+
+    LOT_ID 를 함께 붙여, 몇 번째 LOT 부터 이상인지 바로 추적할 수 있게 한다.
+    """
+    rows: list[dict[str, object]] = []
+
+    lot_ids = (
+        dataframe["LOT_ID"].tolist()
+        if "LOT_ID" in dataframe.columns
+        else []
+    )
+
+    for characteristic in SPC_COLUMNS:
+        if characteristic not in dataframe.columns:
+            continue
+
+        _, _, _, violations = analyze_characteristic(
+            dataframe=dataframe,
+            characteristic=characteristic,
+        )
+
+        for violation in violations:
+            row = violation.to_dict()
+            row["characteristic"] = characteristic
+
+            if lot_ids:
+                row["start_lot"] = lot_ids[
+                    min(violation.start_index, len(lot_ids) - 1)
+                ]
+                row["end_lot"] = lot_ids[
+                    min(violation.end_index, len(lot_ids) - 1)
+                ]
+
+            rows.append(row)
+
+    return pd.DataFrame(rows)
+
+
+def generate_all_spc_charts(
+    dataframe: pd.DataFrame,
+    save_images: bool = True,
+) -> None:
+    """전체 특성의 관리도를 생성하고 결과를 출력한다."""
+    print("=" * 74)
+    print("SPC Analysis  (관리한계는 부분군 내 변동으로 추정)")
+    print("=" * 74)
+
+    for characteristic in SPC_COLUMNS:
+        if characteristic not in dataframe.columns:
+            continue
+
+        (
+            individual_chart,
+            moving_range_chart,
+            capability,
+            violations,
+        ) = analyze_characteristic(
+            dataframe=dataframe,
+            characteristic=characteristic,
+        )
+
+        print_characteristic_report(
+            characteristic=characteristic,
+            capability=capability,
+            violations=violations,
+        )
+
+        if not save_images:
+            continue
+
+        plot_control_chart(
+            chart=individual_chart,
+            characteristic=characteristic,
+            capability=capability,
+            violations=violations,
+        )
+
+        plot_control_chart(
+            chart=moving_range_chart,
+            characteristic=characteristic,
+        )
+
+
+def main() -> None:
+    dataframe = load_process_data()
+
+    generate_all_spc_charts(dataframe)
+
+    report_dir = get_report_directory()
+
+    capability_table = build_capability_table(dataframe)
+    capability_path = report_dir / "process_capability.csv"
+    capability_table.to_csv(
+        capability_path,
+        index=False,
+        encoding="utf-8-sig",
+    )
+
+    violation_table = build_violation_table(dataframe)
+    violation_path = report_dir / "nelson_rule_violations.csv"
+    violation_table.to_csv(
+        violation_path,
+        index=False,
+        encoding="utf-8-sig",
+    )
+
+    print(f"공정능력 요약 저장   : {capability_path}")
+    print(f"판정규칙 위반 저장   : {violation_path}")
 
 
 if __name__ == "__main__":
-    process_df = load_process_data()
-    generate_all_spc_charts(process_df)
+    main()
