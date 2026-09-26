@@ -17,7 +17,7 @@ COMPARE_COLUMNS = [
 
 
 def get_image_directory() -> Path:
-    project_root = Path(__file__).resolve().parent.parent
+    project_root = Path(__file__).resolve().parents[2]
     image_dir = project_root / "images"
     image_dir.mkdir(parents=True, exist_ok=True)
     return image_dir

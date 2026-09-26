@@ -6,11 +6,18 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.append(str(PROJECT_ROOT))
       
-import joblib
 import pandas as pd
 import streamlit as st
 
+from src.dashboard.quality_view import show_quality_analysis
 from src.data.loader import load_process_data
+from src.ml.model_io import (
+    defect_probability,
+    get_positive_label,
+    get_threshold,
+    is_legacy_package,
+    load_model_package as _load_model_package,
+)
 from src.process_spec import PROCESS_SPEC
 
 
@@ -28,21 +35,8 @@ def load_data() -> pd.DataFrame:
 
 @st.cache_resource
 def load_model_package() -> dict:
-    project_root = Path(__file__).resolve().parents[2]
-    model_path = (
-        project_root
-        / "models"
-        / "random_forest_defect_model.joblib"
-    )
-
-    if not model_path.exists():
-        raise FileNotFoundError(
-            "저장된 모델을 찾을 수 없습니다.\n"
-            "먼저 아래 명령을 실행하세요.\n"
-            "python -m src.ml.train_model"
-        )
-
-    return joblib.load(model_path)
+    """모델 패키지를 읽는다. 형식 호환 처리는 src.ml.model_io 가 담당한다."""
+    return _load_model_package()
 
 
 def apply_filters(df: pd.DataFrame) -> pd.DataFrame:
@@ -248,7 +242,7 @@ def create_input_value(feature: str) -> float:
         format="%.3f",
         help=(
             f"Target: {target} {spec['unit']} / "
-            f"LCL: {spec['lcl']} / UCL: {spec['ucl']}"
+            f"LSL: {spec['lsl']} / USL: {spec['usl']}"
         ),
     )
 
@@ -264,7 +258,23 @@ def show_defect_prediction() -> None:
 
     model = model_package["model"]
     model_features = model_package["features"]
-    model_classes = model_package["classes"]
+
+    positive_label = get_positive_label(model_package)
+    threshold = get_threshold(model_package)
+
+    if is_legacy_package(model_package):
+        st.warning(
+            "이전 형식으로 저장된 모델입니다. 판정 임계값이 없어 0.5 가 "
+            "적용되며, 불량이 희소한 공정에서는 검출률이 크게 떨어집니다. "
+            "`python -m src.ml.train_model` 로 재학습하세요."
+        )
+
+    st.caption(
+        f"판정 임계값 {threshold * 100:.2f}% "
+        f"(목표 검출률 {model_package.get('target_recall', 0.9):.0%} 기준). "
+        "불량이 희소한 공정에서 0.5 를 쓰면 검출률이 크게 떨어지므로, "
+        "학습 단계에서 결정한 임계값을 그대로 사용합니다."
+    )
 
     input_values = {}
 
@@ -296,36 +306,50 @@ def show_defect_prediction() -> None:
         columns=model_features,
     )
 
-    predicted_class = model.predict(input_df)[0]
-    probabilities = model.predict_proba(input_df)[0]
-
-    probability_df = pd.DataFrame({
-        "Defect": model_classes,
-        "Probability_%": probabilities * 100,
-    }).sort_values(
-        by="Probability_%",
-        ascending=False,
+    probability = float(
+        defect_probability(model, input_df, positive_label)[0]
     )
 
-    highest_probability = probability_df.iloc[0]["Probability_%"]
+    is_flagged = probability >= threshold
 
-    result_column1, result_column2 = st.columns(2)
+    predicted_label = positive_label if is_flagged else "Normal"
 
-    result_column1.metric(
-        "Predicted Defect",
-        str(predicted_class),
+    probability_df = pd.DataFrame(
+        {
+            "Defect": [positive_label, "Normal"],
+            "Probability_%": [
+                probability * 100,
+                (1.0 - probability) * 100,
+            ],
+        }
     )
+
+    result_column1, result_column2, result_column3 = st.columns(3)
+
+    result_column1.metric("판정", predicted_label)
 
     result_column2.metric(
-        "Prediction Probability",
-        f"{highest_probability:.2f}%",
+        f"{positive_label} 확률",
+        f"{probability * 100:.2f}%",
     )
 
-    if predicted_class == "Normal":
-        st.success("예측 결과: 정상 공정 조건입니다.")
-    else:
+    result_column3.metric(
+        "임계값까지 여유",
+        f"{(threshold - probability) * 100:+.2f}%p",
+        help="음수이면 이미 임계값을 넘어 불량 위험으로 판정된 상태입니다.",
+    )
+
+    if is_flagged:
         st.error(
-            f"예측 결과: {predicted_class} 발생 가능성이 있습니다."
+            f"예측 결과: {positive_label} 위험. "
+            f"확률 {probability * 100:.2f}% 가 "
+            f"임계값 {threshold * 100:.2f}% 이상입니다."
+        )
+    else:
+        st.success(
+            f"예측 결과: 정상 범위. "
+            f"확률 {probability * 100:.2f}% 가 "
+            f"임계값 {threshold * 100:.2f}% 미만입니다."
         )
 
     st.bar_chart(
@@ -356,41 +380,34 @@ def predict_batch(
 ) -> pd.DataFrame:
     model = model_package["model"]
     features = model_package["features"]
-    classes = model_package["classes"]
+
+    positive_label = get_positive_label(model_package)
+    threshold = get_threshold(model_package)
 
     input_x = df[features]
 
-    predictions = model.predict(input_x)
-    probabilities = model.predict_proba(input_x)
+    probability = defect_probability(model, input_x, positive_label)
+    is_flagged = probability >= threshold
 
     result_df = df.copy()
-    result_df["Predicted_Defect"] = predictions
 
-    probability_columns = []
+    result_df[f"Probability_{positive_label}_%"] = (
+        probability * 100
+    ).round(3)
 
-    for class_index, class_name in enumerate(classes):
-        column_name = f"Probability_{class_name}_%"
-        probability_columns.append(column_name)
+    result_df["Decision_Threshold_%"] = round(threshold * 100, 3)
 
-        result_df[column_name] = (
-            probabilities[:, class_index] * 100
-        ).round(3)
+    result_df["Margin_To_Threshold_%"] = (
+        (threshold - probability) * 100
+    ).round(3)
 
-    result_df["Max_Probability_%"] = (
-        result_df[probability_columns]
-        .max(axis=1)
-        .round(3)
-    )
+    result_df["Predicted_Defect"] = [
+        positive_label if flag else "Normal" for flag in is_flagged
+    ]
 
-    result_df["Prediction_Status"] = result_df[
-        "Predicted_Defect"
-    ].apply(
-        lambda value: (
-            "Normal"
-            if value == "Normal"
-            else "Defect Risk"
-        )
-    )
+    result_df["Prediction_Status"] = [
+        "Defect Risk" if flag else "Normal" for flag in is_flagged
+    ]
 
     return result_df
 
@@ -463,9 +480,12 @@ def show_batch_prediction() -> None:
         result_df["Predicted_Defect"] != "Normal"
     ).sum()
     defect_rate = defect_rows / total_rows * 100
-    average_probability = result_df[
-        "Max_Probability_%"
-    ].mean()
+    probability_column = next(
+        column
+        for column in result_df.columns
+        if column.startswith("Probability_")
+    )
+    average_probability = result_df[probability_column].mean()
 
     column1, column2, column3, column4 = st.columns(4)
 
@@ -473,7 +493,7 @@ def show_batch_prediction() -> None:
     column2.metric("Defect Risk LOTs", f"{defect_rows:,}")
     column3.metric("Defect Risk Rate", f"{defect_rate:.2f}%")
     column4.metric(
-        "Average Confidence",
+        "평균 불량 확률",
         f"{average_probability:.2f}%",
     )
 
@@ -532,8 +552,14 @@ def main() -> None:
     st.warning("기존 합성 데이터·무작위 분할 모델의 학습용 화면입니다. 실제 공정 불량 확률이나 원인으로 해석하지 마세요.")
     st.title("Manufacturing AI Dashboard")
 
-    dashboard_tab, single_prediction_tab, batch_prediction_tab = st.tabs([
+    (
+        dashboard_tab,
+        quality_tab,
+        single_prediction_tab,
+        batch_prediction_tab,
+    ) = st.tabs([
         "Process Dashboard",
+        "품질 분석",
         "Single Prediction",
         "Batch CSV Prediction",
     ])
@@ -567,6 +593,9 @@ def main() -> None:
 
         st.divider()
         show_lot_detail(filtered_df)
+
+    with quality_tab:
+        show_quality_analysis(load_data())
 
     with single_prediction_tab:
         show_defect_prediction()

@@ -7,16 +7,17 @@ import time
 
 PIPELINE_MODULES = [
     ("Generate Process Data", "src.data.generate_process_data"),
+    ("Generate MSA Data", "src.data.generate_msa_data"),
     ("Update SQLite Database", "src.database.create_database"),
     ("Validate Process Data", "src.data.loader"),
     ("Generate Trend Analysis", "src.analysis.trend"),
     ("Generate SPC Analysis", "src.analysis.spc"),
+    ("Run Quality Analysis Suite", "src.quality.run_quality_analysis"),
     ("Generate Correlation Analysis", "src.analysis.correlation"),
     ("Generate Defect Analysis", "src.analysis.defect"),
-    ("Detect Abnormal LOTs", "src.analysis.outlier"),
+    ("Detect Spec Outliers", "src.analysis.outlier"),
     ("Train and Save Model", "src.ml.train_model"),
-    ("Run Random Forest Analysis", "src.ml.random_forest"),
-    ("Run SHAP Analysis", "src.ml.shap_analysis"),
+    ("Run SHAP Analysis", "src.ml.shap_analysis"),  # 필요 패키지: shap
     ("Run Batch Prediction", "src.ml.batch_predict"),
     ("Generate PDF Report", "src.report.pdf_report"),
 ]
