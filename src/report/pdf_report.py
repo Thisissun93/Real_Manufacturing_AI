@@ -372,8 +372,8 @@ def create_capability_page(
     for column in CAPABILITY_COLUMNS:
         spec = PROCESS_SPEC[column]
 
-        lsl = spec["lcl"]
-        usl = spec["ucl"]
+        lsl = spec["lsl"]
+        usl = spec["usl"]
 
         result = calculate_capability(
             series=df[column],

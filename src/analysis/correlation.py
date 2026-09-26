@@ -20,7 +20,7 @@ CORR_COLUMNS = [
 
 
 def get_image_directory():
-    project_root = Path(__file__).resolve().parent.parent
+    project_root = Path(__file__).resolve().parents[2]
     image_dir = project_root / "images"
     image_dir.mkdir(exist_ok=True)
 

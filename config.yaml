@@ -2,7 +2,7 @@ project:
   name: Real_Manufacturing_AI
 
 data:
-  sample_size: 5000
+  sample_size: 8000
   random_state: 42
 
 model:
@@ -18,3 +18,19 @@ pipeline:
 dashboard:
   default_yield_min: 0
   default_yield_max: 100
+
+quality:
+  # 불량 예측 모델의 목표 검출률(재현율).
+  # 판정 임계값을 0.5 로 고정하지 않고 이 값에서 결정한다.
+  target_recall: 0.90
+  # Nelson 판정 규칙 적용 대상 규칙 번호
+  nelson_rules: [1, 2, 3, 4, 5, 6, 7, 8]
+  # 관리도 부분군 크기 (설비별 X-bar-R 관리도)
+  subgroup_size: 5
+
+msa:
+  part_count: 10
+  operator_count: 3
+  replicate_count: 3
+  # 측정 대상 특성
+  characteristic: Total_Thickness
