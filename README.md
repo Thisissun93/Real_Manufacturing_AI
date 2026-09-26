@@ -1,6 +1,6 @@
 # Real Manufacturing Intelligence — Ver1.0
 
-[![앱 바로 실행](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://realmanufacturingai-gqmhke2ybcjhdrsndjsh2e.streamlit.app/)
+[![앱 바로 실행](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://realmanufacturingai-xrwbpls76u46mbkshgmu64.streamlit.app/)
 
 제작자: 김태양. ABF 제조 이력 조사·통계·예방보전 검토를 연결하는 공개용 합성 데이터 시연 프로그램입니다. 실제 제조사·장비 형식과 사내 양산 정보를 포함하지 않습니다.
 
