@@ -1,0 +1,4 @@
+﻿Machine,lot_count,defect_rate_percent,CZ_Concentration_mean,Press2_Pressure_mean,Press2_Temp_mean,Cure_Temp_mean,Anneal_Temp_mean
+PRESS_01,2743,7.18,10.0,10.003,99.988,149.958,199.994
+PRESS_02,2646,21.05,9.999,9.777,99.451,149.993,199.994
+PRESS_03,2611,10.46,9.998,9.998,99.974,148.313,200.016

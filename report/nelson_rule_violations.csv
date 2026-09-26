@@ -1,0 +1,1192 @@
+﻿rule_number,rule_name,description,severity,start_index,end_index,point_count,interpretation,characteristic,start_lot,end_lot
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,9,9,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",CZ_Roughness,LOT000010,LOT000010
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,54,58,5,작은 평균 이동이 지속되고 있다.,CZ_Roughness,LOT000055,LOT000059
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,103,103,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",CZ_Roughness,LOT000104,LOT000104
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,180,208,29,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,CZ_Roughness,LOT000181,LOT000209
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,219,228,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",CZ_Roughness,LOT000220,LOT000229
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,285,285,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",CZ_Roughness,LOT000286,LOT000286
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,639,644,6,작은 평균 이동이 지속되고 있다.,CZ_Roughness,LOT000640,LOT000645
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,691,697,7,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",CZ_Roughness,LOT000692,LOT000698
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,811,811,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",CZ_Roughness,LOT000812,LOT000812
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,847,851,5,작은 평균 이동이 지속되고 있다.,CZ_Roughness,LOT000848,LOT000852
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,916,931,16,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,CZ_Roughness,LOT000917,LOT000932
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,967,971,5,작은 평균 이동이 지속되고 있다.,CZ_Roughness,LOT000968,LOT000972
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,1128,1132,5,작은 평균 이동이 지속되고 있다.,CZ_Roughness,LOT001129,LOT001133
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,1143,1147,5,작은 평균 이동이 지속되고 있다.,CZ_Roughness,LOT001144,LOT001148
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1185,1185,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",CZ_Roughness,LOT001186,LOT001186
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,1225,1229,5,작은 평균 이동이 지속되고 있다.,CZ_Roughness,LOT001226,LOT001230
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,1236,1241,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",CZ_Roughness,LOT001237,LOT001242
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1241,1241,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",CZ_Roughness,LOT001242,LOT001242
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1402,1402,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",CZ_Roughness,LOT001403,LOT001403
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,1442,1446,5,작은 평균 이동이 지속되고 있다.,CZ_Roughness,LOT001443,LOT001447
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1556,1556,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",CZ_Roughness,LOT001557,LOT001557
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1572,1580,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",CZ_Roughness,LOT001573,LOT001581
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,1638,1643,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",CZ_Roughness,LOT001639,LOT001644
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,1686,1688,3,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,CZ_Roughness,LOT001687,LOT001689
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1821,1829,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",CZ_Roughness,LOT001822,LOT001830
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,1821,1826,6,작은 평균 이동이 지속되고 있다.,CZ_Roughness,LOT001822,LOT001827
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,1843,1849,7,작은 평균 이동이 지속되고 있다.,CZ_Roughness,LOT001844,LOT001850
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,1850,1864,15,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,CZ_Roughness,LOT001851,LOT001865
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1887,1887,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",CZ_Roughness,LOT001888,LOT001888
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,1987,2000,14,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,CZ_Roughness,LOT001988,LOT002001
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,2285,2302,18,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,CZ_Roughness,LOT002286,LOT002303
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2359,2367,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",CZ_Roughness,LOT002360,LOT002368
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2543,2551,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",CZ_Roughness,LOT002544,LOT002552
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,2901,2917,17,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,CZ_Roughness,LOT002902,LOT002918
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2925,2925,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",CZ_Roughness,LOT002926,LOT002926
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,3006,3009,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,CZ_Roughness,LOT003007,LOT003010
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,3166,3170,5,작은 평균 이동이 지속되고 있다.,CZ_Roughness,LOT003167,LOT003171
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,3186,3191,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",CZ_Roughness,LOT003187,LOT003192
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,3227,3229,3,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,CZ_Roughness,LOT003228,LOT003230
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,3244,3249,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",CZ_Roughness,LOT003245,LOT003250
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3256,3256,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",CZ_Roughness,LOT003257,LOT003257
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,3336,3351,16,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,CZ_Roughness,LOT003337,LOT003352
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3384,3384,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",CZ_Roughness,LOT003385,LOT003385
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3388,3397,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",CZ_Roughness,LOT003389,LOT003398
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3423,3432,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",CZ_Roughness,LOT003424,LOT003433
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,3618,3631,14,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,CZ_Roughness,LOT003619,LOT003632
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,3657,3661,5,작은 평균 이동이 지속되고 있다.,CZ_Roughness,LOT003658,LOT003662
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,3675,3691,17,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,CZ_Roughness,LOT003676,LOT003692
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,3701,3714,14,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,CZ_Roughness,LOT003702,LOT003715
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,3717,3722,6,작은 평균 이동이 지속되고 있다.,CZ_Roughness,LOT003718,LOT003723
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,3732,3738,7,작은 평균 이동이 지속되고 있다.,CZ_Roughness,LOT003733,LOT003739
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3733,3741,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",CZ_Roughness,LOT003734,LOT003742
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,3781,3791,11,작은 평균 이동이 지속되고 있다.,CZ_Roughness,LOT003782,LOT003792
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3783,3783,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",CZ_Roughness,LOT003784,LOT003784
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,3841,3855,15,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,CZ_Roughness,LOT003842,LOT003856
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3928,3936,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",CZ_Roughness,LOT003929,LOT003937
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,3928,3932,5,작은 평균 이동이 지속되고 있다.,CZ_Roughness,LOT003929,LOT003933
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4007,4007,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",CZ_Roughness,LOT004008,LOT004008
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,4065,4068,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,CZ_Roughness,LOT004066,LOT004069
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,4075,4080,6,작은 평균 이동이 지속되고 있다.,CZ_Roughness,LOT004076,LOT004081
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4221,4221,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",CZ_Roughness,LOT004222,LOT004222
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,4398,4412,15,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,CZ_Roughness,LOT004399,LOT004413
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,4539,4544,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",CZ_Roughness,LOT004540,LOT004545
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,4567,4572,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",CZ_Roughness,LOT004568,LOT004573
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4657,4657,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",CZ_Roughness,LOT004658,LOT004658
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,4708,4721,14,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,CZ_Roughness,LOT004709,LOT004722
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4793,4793,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",CZ_Roughness,LOT004794,LOT004794
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,4807,4820,14,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,CZ_Roughness,LOT004808,LOT004821
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,4837,4853,17,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,CZ_Roughness,LOT004838,LOT004854
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4885,4893,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",CZ_Roughness,LOT004886,LOT004894
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,4900,4902,3,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,CZ_Roughness,LOT004901,LOT004903
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,4925,4929,5,작은 평균 이동이 지속되고 있다.,CZ_Roughness,LOT004926,LOT004930
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,5058,5060,3,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,CZ_Roughness,LOT005059,LOT005061
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5139,5139,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",CZ_Roughness,LOT005140,LOT005140
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,5245,5259,15,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,CZ_Roughness,LOT005246,LOT005260
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5388,5396,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",CZ_Roughness,LOT005389,LOT005397
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,5494,5496,3,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,CZ_Roughness,LOT005495,LOT005497
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,5547,5551,5,작은 평균 이동이 지속되고 있다.,CZ_Roughness,LOT005548,LOT005552
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,5590,5596,7,작은 평균 이동이 지속되고 있다.,CZ_Roughness,LOT005591,LOT005597
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5632,5642,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",CZ_Roughness,LOT005633,LOT005643
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,5638,5643,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",CZ_Roughness,LOT005639,LOT005644
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5949,5949,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",CZ_Roughness,LOT005950,LOT005950
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,5988,5993,6,작은 평균 이동이 지속되고 있다.,CZ_Roughness,LOT005989,LOT005994
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,5990,5993,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,CZ_Roughness,LOT005991,LOT005994
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,5999,6013,15,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,CZ_Roughness,LOT006000,LOT006014
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6081,6081,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",CZ_Roughness,LOT006082,LOT006082
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6125,6135,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",CZ_Roughness,LOT006126,LOT006136
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6265,6273,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",CZ_Roughness,LOT006266,LOT006274
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6345,6345,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",CZ_Roughness,LOT006346,LOT006346
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6349,6357,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",CZ_Roughness,LOT006350,LOT006358
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6385,6393,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",CZ_Roughness,LOT006386,LOT006394
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6468,6468,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",CZ_Roughness,LOT006469,LOT006469
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6571,6571,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",CZ_Roughness,LOT006572,LOT006572
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,6614,6619,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",CZ_Roughness,LOT006615,LOT006620
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,6651,6667,17,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,CZ_Roughness,LOT006652,LOT006668
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6720,6728,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",CZ_Roughness,LOT006721,LOT006729
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,6723,6730,8,작은 평균 이동이 지속되고 있다.,CZ_Roughness,LOT006724,LOT006731
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,6728,6741,14,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,CZ_Roughness,LOT006729,LOT006742
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,6886,6890,5,작은 평균 이동이 지속되고 있다.,CZ_Roughness,LOT006887,LOT006891
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,6926,6930,5,작은 평균 이동이 지속되고 있다.,CZ_Roughness,LOT006927,LOT006931
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,6928,6950,23,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,CZ_Roughness,LOT006929,LOT006951
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,7038,7060,23,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,CZ_Roughness,LOT007039,LOT007061
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,7224,7226,3,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,CZ_Roughness,LOT007225,LOT007227
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,7236,7255,20,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,CZ_Roughness,LOT007237,LOT007256
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,7329,7334,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",CZ_Roughness,LOT007330,LOT007335
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,7338,7353,16,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,CZ_Roughness,LOT007339,LOT007354
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,7496,7501,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",CZ_Roughness,LOT007497,LOT007502
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,7529,7533,5,작은 평균 이동이 지속되고 있다.,CZ_Roughness,LOT007530,LOT007534
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,7634,7638,5,작은 평균 이동이 지속되고 있다.,CZ_Roughness,LOT007635,LOT007639
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7753,7763,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",CZ_Roughness,LOT007754,LOT007764
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,7842,7856,15,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,CZ_Roughness,LOT007843,LOT007857
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,7938,7942,5,작은 평균 이동이 지속되고 있다.,CZ_Roughness,LOT007939,LOT007943
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,7950,7956,7,작은 평균 이동이 지속되고 있다.,CZ_Roughness,LOT007951,LOT007957
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7969,7969,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",CZ_Roughness,LOT007970,LOT007970
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,4,9,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Peel_Strength,LOT000005,LOT000010
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,19,28,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Peel_Strength,LOT000020,LOT000029
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,64,80,17,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Peel_Strength,LOT000065,LOT000081
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,77,82,6,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT000078,LOT000083
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,186,186,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Peel_Strength,LOT000187,LOT000187
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,219,228,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Peel_Strength,LOT000220,LOT000229
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,358,358,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Peel_Strength,LOT000359,LOT000359
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,510,514,5,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT000511,LOT000515
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,548,551,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Peel_Strength,LOT000549,LOT000552
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,605,621,17,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Peel_Strength,LOT000606,LOT000622
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,608,617,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Peel_Strength,LOT000609,LOT000618
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,616,621,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Peel_Strength,LOT000617,LOT000622
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,637,643,7,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT000638,LOT000644
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,640,640,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Peel_Strength,LOT000641,LOT000641
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,730,733,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Peel_Strength,LOT000731,LOT000734
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,758,766,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Peel_Strength,LOT000759,LOT000767
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,870,876,7,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Peel_Strength,LOT000871,LOT000877
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,874,879,6,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT000875,LOT000880
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,921,935,15,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Peel_Strength,LOT000922,LOT000936
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,1128,1132,5,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT001129,LOT001133
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,1137,1139,3,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Peel_Strength,LOT001138,LOT001140
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,1143,1147,5,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT001144,LOT001148
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,1225,1231,7,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT001226,LOT001232
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,1560,1564,5,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT001561,LOT001565
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1585,1585,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Peel_Strength,LOT001586,LOT001586
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,1734,1739,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Peel_Strength,LOT001735,LOT001740
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,1741,1746,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Peel_Strength,LOT001742,LOT001747
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1794,1803,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Peel_Strength,LOT001795,LOT001804
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,1795,1802,8,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT001796,LOT001803
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,1801,1814,14,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Peel_Strength,LOT001802,LOT001815
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1821,1829,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Peel_Strength,LOT001822,LOT001830
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,1866,1869,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Peel_Strength,LOT001867,LOT001870
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,1933,1937,5,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT001934,LOT001938
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,2038,2054,17,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Peel_Strength,LOT002039,LOT002055
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,2089,2094,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Peel_Strength,LOT002090,LOT002095
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,2109,2115,7,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Peel_Strength,LOT002110,LOT002116
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,2113,2117,5,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT002114,LOT002118
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,2310,2312,3,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Peel_Strength,LOT002311,LOT002313
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2369,2369,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Peel_Strength,LOT002370,LOT002370
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2414,2414,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Peel_Strength,LOT002415,LOT002415
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,2423,2437,15,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Peel_Strength,LOT002424,LOT002438
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,2847,2853,7,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT002848,LOT002854
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,2931,2933,3,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Peel_Strength,LOT002932,LOT002934
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,3166,3170,5,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT003167,LOT003171
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,3186,3191,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Peel_Strength,LOT003187,LOT003192
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,3189,3192,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Peel_Strength,LOT003190,LOT003193
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,3225,3229,5,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT003226,LOT003230
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,3230,3247,18,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Peel_Strength,LOT003231,LOT003248
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3256,3256,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Peel_Strength,LOT003257,LOT003257
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,3304,3319,16,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Peel_Strength,LOT003305,LOT003320
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3384,3384,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Peel_Strength,LOT003385,LOT003385
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3423,3435,13,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Peel_Strength,LOT003424,LOT003436
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,3423,3427,5,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT003424,LOT003428
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3463,3474,12,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Peel_Strength,LOT003464,LOT003475
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,3618,3634,17,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Peel_Strength,LOT003619,LOT003635
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,3641,3645,5,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT003642,LOT003646
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,3657,3662,6,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT003658,LOT003663
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3733,3741,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Peel_Strength,LOT003734,LOT003742
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3783,3783,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Peel_Strength,LOT003784,LOT003784
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,3823,3828,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Peel_Strength,LOT003824,LOT003829
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3836,3844,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Peel_Strength,LOT003837,LOT003845
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,3924,3929,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Peel_Strength,LOT003925,LOT003930
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,3927,3930,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Peel_Strength,LOT003928,LOT003931
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,3928,3932,5,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT003929,LOT003933
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,3969,3974,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Peel_Strength,LOT003970,LOT003975
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4007,4007,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Peel_Strength,LOT004008,LOT004008
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,4134,4151,18,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Peel_Strength,LOT004135,LOT004152
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4221,4221,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Peel_Strength,LOT004222,LOT004222
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4274,4283,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Peel_Strength,LOT004275,LOT004284
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,4705,4721,17,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Peel_Strength,LOT004706,LOT004722
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,4807,4825,19,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Peel_Strength,LOT004808,LOT004826
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,4886,4891,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Peel_Strength,LOT004887,LOT004892
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,4919,4925,7,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Peel_Strength,LOT004920,LOT004926
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,4944,4959,16,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Peel_Strength,LOT004945,LOT004960
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,5241,5259,19,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Peel_Strength,LOT005242,LOT005260
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,5333,5350,18,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Peel_Strength,LOT005334,LOT005351
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5343,5353,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Peel_Strength,LOT005344,LOT005354
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,5385,5390,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Peel_Strength,LOT005386,LOT005391
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5387,5396,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Peel_Strength,LOT005388,LOT005397
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,5492,5496,5,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT005493,LOT005497
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,5542,5557,16,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Peel_Strength,LOT005543,LOT005558
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5583,5595,13,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Peel_Strength,LOT005584,LOT005596
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,5589,5596,8,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT005590,LOT005597
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,5649,5654,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Peel_Strength,LOT005650,LOT005655
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,5801,5806,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Peel_Strength,LOT005802,LOT005807
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,5802,5819,18,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Peel_Strength,LOT005803,LOT005820
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,5854,5859,6,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT005855,LOT005860
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,5893,5897,5,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT005894,LOT005898
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5926,5926,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Peel_Strength,LOT005927,LOT005927
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5955,5969,15,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Peel_Strength,LOT005956,LOT005970
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5970,5970,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Peel_Strength,LOT005971,LOT005971
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5975,5986,12,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Peel_Strength,LOT005976,LOT005987
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,5990,5993,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Peel_Strength,LOT005991,LOT005994
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,5995,6009,15,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Peel_Strength,LOT005996,LOT006010
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6018,6018,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Peel_Strength,LOT006019,LOT006019
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6124,6132,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Peel_Strength,LOT006125,LOT006133
+8,NELSON_RULE_8,8점 연속 1시그마 밖,WARNING,6163,6171,9,중심 부근이 비어 있다. 서로 다른 두 모집단이 섞였을 가능성이 크다.,Peel_Strength,LOT006164,LOT006172
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,6340,6343,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Peel_Strength,LOT006341,LOT006344
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6345,6345,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Peel_Strength,LOT006346,LOT006346
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6397,6406,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Peel_Strength,LOT006398,LOT006407
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,6565,6569,5,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT006566,LOT006570
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6571,6571,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Peel_Strength,LOT006572,LOT006572
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,6652,6667,16,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Peel_Strength,LOT006653,LOT006668
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,6675,6679,5,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT006676,LOT006680
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,6728,6741,14,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Peel_Strength,LOT006729,LOT006742
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6911,6911,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Peel_Strength,LOT006912,LOT006912
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,6928,6950,23,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Peel_Strength,LOT006929,LOT006951
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,6956,6972,17,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Peel_Strength,LOT006957,LOT006973
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,6965,6971,7,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Peel_Strength,LOT006966,LOT006972
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,6974,6980,7,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Peel_Strength,LOT006975,LOT006981
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,6979,6983,5,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT006980,LOT006984
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6990,6990,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Peel_Strength,LOT006991,LOT006991
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,7050,7067,18,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Peel_Strength,LOT007051,LOT007068
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7088,7088,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Peel_Strength,LOT007089,LOT007089
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,7117,7120,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Peel_Strength,LOT007118,LOT007121
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7138,7147,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Peel_Strength,LOT007139,LOT007148
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7165,7173,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Peel_Strength,LOT007166,LOT007174
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,7252,7256,5,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT007253,LOT007257
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,7395,7397,3,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Peel_Strength,LOT007396,LOT007398
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7470,7470,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Peel_Strength,LOT007471,LOT007471
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,7473,7478,6,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT007474,LOT007479
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,7587,7601,15,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Peel_Strength,LOT007588,LOT007602
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,7623,7630,8,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT007624,LOT007631
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,7635,7643,9,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT007636,LOT007644
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,7675,7680,6,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT007676,LOT007681
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,7696,7700,5,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT007697,LOT007701
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,7699,7704,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Peel_Strength,LOT007700,LOT007705
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7753,7761,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Peel_Strength,LOT007754,LOT007762
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,7952,7957,6,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT007953,LOT007958
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,7992,7997,6,작은 평균 이동이 지속되고 있다.,Peel_Strength,LOT007993,LOT007998
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,64,78,15,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,ABF_Roughness,LOT000065,LOT000079
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,169,173,5,작은 평균 이동이 지속되고 있다.,ABF_Roughness,LOT000170,LOT000174
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,205,212,8,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",ABF_Roughness,LOT000206,LOT000213
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,220,225,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",ABF_Roughness,LOT000221,LOT000226
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,256,261,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",ABF_Roughness,LOT000257,LOT000262
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,258,272,15,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,ABF_Roughness,LOT000259,LOT000273
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,285,285,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",ABF_Roughness,LOT000286,LOT000286
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,329,338,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",ABF_Roughness,LOT000330,LOT000339
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,487,495,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",ABF_Roughness,LOT000488,LOT000496
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,515,528,14,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,ABF_Roughness,LOT000516,LOT000529
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,590,595,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",ABF_Roughness,LOT000591,LOT000596
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,608,618,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",ABF_Roughness,LOT000609,LOT000619
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,637,643,7,작은 평균 이동이 지속되고 있다.,ABF_Roughness,LOT000638,LOT000644
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,638,640,3,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,ABF_Roughness,LOT000639,LOT000641
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,640,640,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",ABF_Roughness,LOT000641,LOT000641
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,730,733,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,ABF_Roughness,LOT000731,LOT000734
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,741,743,3,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,ABF_Roughness,LOT000742,LOT000744
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,746,750,5,작은 평균 이동이 지속되고 있다.,ABF_Roughness,LOT000747,LOT000751
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,762,770,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",ABF_Roughness,LOT000763,LOT000771
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,783,787,5,작은 평균 이동이 지속되고 있다.,ABF_Roughness,LOT000784,LOT000788
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,838,846,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",ABF_Roughness,LOT000839,LOT000847
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,864,870,7,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",ABF_Roughness,LOT000865,LOT000871
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,909,916,8,작은 평균 이동이 지속되고 있다.,ABF_Roughness,LOT000910,LOT000917
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,919,933,15,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,ABF_Roughness,LOT000920,LOT000934
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,935,939,5,작은 평균 이동이 지속되고 있다.,ABF_Roughness,LOT000936,LOT000940
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,979,982,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,ABF_Roughness,LOT000980,LOT000983
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,1128,1132,5,작은 평균 이동이 지속되고 있다.,ABF_Roughness,LOT001129,LOT001133
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,1349,1353,5,작은 평균 이동이 지속되고 있다.,ABF_Roughness,LOT001350,LOT001354
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,1462,1481,20,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,ABF_Roughness,LOT001463,LOT001482
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,1551,1556,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",ABF_Roughness,LOT001552,LOT001557
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,1583,1587,5,작은 평균 이동이 지속되고 있다.,ABF_Roughness,LOT001584,LOT001588
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,1585,1587,3,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,ABF_Roughness,LOT001586,LOT001588
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1794,1810,17,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",ABF_Roughness,LOT001795,LOT001811
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,1866,1869,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,ABF_Roughness,LOT001867,LOT001870
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,2095,2100,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",ABF_Roughness,LOT002096,LOT002101
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,2251,2256,6,작은 평균 이동이 지속되고 있다.,ABF_Roughness,LOT002252,LOT002257
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2430,2438,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",ABF_Roughness,LOT002431,LOT002439
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,2544,2550,7,작은 평균 이동이 지속되고 있다.,ABF_Roughness,LOT002545,LOT002551
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,2948,2965,18,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,ABF_Roughness,LOT002949,LOT002966
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,3128,3133,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",ABF_Roughness,LOT003129,LOT003134
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,3148,3164,17,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,ABF_Roughness,LOT003149,LOT003165
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,3166,3171,6,작은 평균 이동이 지속되고 있다.,ABF_Roughness,LOT003167,LOT003172
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,3189,3193,5,작은 평균 이동이 지속되고 있다.,ABF_Roughness,LOT003190,LOT003194
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3256,3256,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",ABF_Roughness,LOT003257,LOT003257
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3384,3384,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",ABF_Roughness,LOT003385,LOT003385
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3392,3403,12,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",ABF_Roughness,LOT003393,LOT003404
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,3503,3508,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",ABF_Roughness,LOT003504,LOT003509
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3919,3919,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",ABF_Roughness,LOT003920,LOT003920
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3928,3937,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",ABF_Roughness,LOT003929,LOT003938
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,3972,3976,5,작은 평균 이동이 지속되고 있다.,ABF_Roughness,LOT003973,LOT003977
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4159,4167,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",ABF_Roughness,LOT004160,LOT004168
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,4192,4194,3,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,ABF_Roughness,LOT004193,LOT004195
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,4210,4215,6,작은 평균 이동이 지속되고 있다.,ABF_Roughness,LOT004211,LOT004216
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4248,4248,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",ABF_Roughness,LOT004249,LOT004249
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,4371,4385,15,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,ABF_Roughness,LOT004372,LOT004386
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,4410,4431,22,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,ABF_Roughness,LOT004411,LOT004432
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,4450,4453,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,ABF_Roughness,LOT004451,LOT004454
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4499,4499,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",ABF_Roughness,LOT004500,LOT004500
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4583,4591,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",ABF_Roughness,LOT004584,LOT004592
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,4655,4660,6,작은 평균 이동이 지속되고 있다.,ABF_Roughness,LOT004656,LOT004661
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,4812,4825,14,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,ABF_Roughness,LOT004813,LOT004826
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,4831,4837,7,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",ABF_Roughness,LOT004832,LOT004838
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,4841,4846,6,작은 평균 이동이 지속되고 있다.,ABF_Roughness,LOT004842,LOT004847
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4865,4865,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",ABF_Roughness,LOT004866,LOT004866
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,4943,4966,24,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,ABF_Roughness,LOT004944,LOT004967
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4978,4978,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",ABF_Roughness,LOT004979,LOT004979
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4982,4992,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",ABF_Roughness,LOT004983,LOT004993
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5107,5116,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",ABF_Roughness,LOT005108,LOT005117
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,5134,5139,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",ABF_Roughness,LOT005135,LOT005140
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,5241,5258,18,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,ABF_Roughness,LOT005242,LOT005259
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,5272,5274,3,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,ABF_Roughness,LOT005273,LOT005275
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,5281,5294,14,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,ABF_Roughness,LOT005282,LOT005295
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,5332,5349,18,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,ABF_Roughness,LOT005333,LOT005350
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5341,5341,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",ABF_Roughness,LOT005342,LOT005342
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5343,5353,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",ABF_Roughness,LOT005344,LOT005354
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5386,5396,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",ABF_Roughness,LOT005387,LOT005397
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,5390,5403,14,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,ABF_Roughness,LOT005391,LOT005404
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,5740,5744,5,작은 평균 이동이 지속되고 있다.,ABF_Roughness,LOT005741,LOT005745
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5766,5766,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",ABF_Roughness,LOT005767,LOT005767
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,5770,5775,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",ABF_Roughness,LOT005771,LOT005776
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,5892,5895,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,ABF_Roughness,LOT005893,LOT005896
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,5936,5943,8,작은 평균 이동이 지속되고 있다.,ABF_Roughness,LOT005937,LOT005944
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5957,5966,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",ABF_Roughness,LOT005958,LOT005967
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5975,5984,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",ABF_Roughness,LOT005976,LOT005985
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,5998,6013,16,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,ABF_Roughness,LOT005999,LOT006014
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6018,6018,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",ABF_Roughness,LOT006019,LOT006019
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6031,6031,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",ABF_Roughness,LOT006032,LOT006032
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,6188,6192,5,작은 평균 이동이 지속되고 있다.,ABF_Roughness,LOT006189,LOT006193
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6292,6301,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",ABF_Roughness,LOT006293,LOT006302
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,6293,6297,5,작은 평균 이동이 지속되고 있다.,ABF_Roughness,LOT006294,LOT006298
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,6344,6349,6,작은 평균 이동이 지속되고 있다.,ABF_Roughness,LOT006345,LOT006350
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6345,6345,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",ABF_Roughness,LOT006346,LOT006346
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6349,6357,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",ABF_Roughness,LOT006350,LOT006358
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,6380,6385,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",ABF_Roughness,LOT006381,LOT006386
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6397,6408,12,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",ABF_Roughness,LOT006398,LOT006409
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6582,6590,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",ABF_Roughness,LOT006583,LOT006591
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6663,6671,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",ABF_Roughness,LOT006664,LOT006672
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,6698,6714,17,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,ABF_Roughness,LOT006699,LOT006715
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,6755,6761,7,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",ABF_Roughness,LOT006756,LOT006762
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,6781,6785,5,작은 평균 이동이 지속되고 있다.,ABF_Roughness,LOT006782,LOT006786
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,6872,6887,16,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,ABF_Roughness,LOT006873,LOT006888
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,6898,6913,16,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,ABF_Roughness,LOT006899,LOT006914
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,6976,6983,8,작은 평균 이동이 지속되고 있다.,ABF_Roughness,LOT006977,LOT006984
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6977,6988,12,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",ABF_Roughness,LOT006978,LOT006989
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,7050,7066,17,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,ABF_Roughness,LOT007051,LOT007067
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,7059,7061,3,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,ABF_Roughness,LOT007060,LOT007062
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7138,7149,12,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",ABF_Roughness,LOT007139,LOT007150
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7159,7169,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",ABF_Roughness,LOT007160,LOT007170
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7212,7212,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",ABF_Roughness,LOT007213,LOT007213
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,7369,7373,5,작은 평균 이동이 지속되고 있다.,ABF_Roughness,LOT007370,LOT007374
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,7423,7427,5,작은 평균 이동이 지속되고 있다.,ABF_Roughness,LOT007424,LOT007428
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,7449,7453,5,작은 평균 이동이 지속되고 있다.,ABF_Roughness,LOT007450,LOT007454
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,7742,7747,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",ABF_Roughness,LOT007743,LOT007748
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,7806,7812,7,작은 평균 이동이 지속되고 있다.,ABF_Roughness,LOT007807,LOT007813
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,7876,7890,15,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,ABF_Roughness,LOT007877,LOT007891
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,7910,7926,17,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,ABF_Roughness,LOT007911,LOT007927
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,43,56,14,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Total_Thickness,LOT000044,LOT000057
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,107,111,5,작은 평균 이동이 지속되고 있다.,Total_Thickness,LOT000108,LOT000112
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,182,184,3,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Total_Thickness,LOT000183,LOT000185
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,359,364,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Total_Thickness,LOT000360,LOT000365
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,366,381,16,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Total_Thickness,LOT000367,LOT000382
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,370,374,5,작은 평균 이동이 지속되고 있다.,Total_Thickness,LOT000371,LOT000375
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,431,443,13,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Total_Thickness,LOT000432,LOT000444
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,475,481,7,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Total_Thickness,LOT000476,LOT000482
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,602,602,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Total_Thickness,LOT000603,LOT000603
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,615,636,22,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Total_Thickness,LOT000616,LOT000637
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,641,664,24,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Total_Thickness,LOT000642,LOT000665
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,665,670,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Total_Thickness,LOT000666,LOT000671
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,734,737,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Total_Thickness,LOT000735,LOT000738
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,736,736,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Total_Thickness,LOT000737,LOT000737
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,815,819,5,작은 평균 이동이 지속되고 있다.,Total_Thickness,LOT000816,LOT000820
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,825,829,5,작은 평균 이동이 지속되고 있다.,Total_Thickness,LOT000826,LOT000830
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,984,989,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Total_Thickness,LOT000985,LOT000990
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1098,1106,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Total_Thickness,LOT001099,LOT001107
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,1098,1102,5,작은 평균 이동이 지속되고 있다.,Total_Thickness,LOT001099,LOT001103
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,1210,1215,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Total_Thickness,LOT001211,LOT001216
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1213,1223,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Total_Thickness,LOT001214,LOT001224
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,1392,1396,5,작은 평균 이동이 지속되고 있다.,Total_Thickness,LOT001393,LOT001397
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,1432,1438,7,작은 평균 이동이 지속되고 있다.,Total_Thickness,LOT001433,LOT001439
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,1554,1571,18,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Total_Thickness,LOT001555,LOT001572
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,1628,1646,19,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Total_Thickness,LOT001629,LOT001647
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,1768,1771,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Total_Thickness,LOT001769,LOT001772
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,1956,1961,6,작은 평균 이동이 지속되고 있다.,Total_Thickness,LOT001957,LOT001962
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,1961,1965,5,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Total_Thickness,LOT001962,LOT001966
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1969,1969,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Total_Thickness,LOT001970,LOT001970
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,1976,1979,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Total_Thickness,LOT001977,LOT001980
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,2101,2115,15,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Total_Thickness,LOT002102,LOT002116
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2173,2173,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Total_Thickness,LOT002174,LOT002174
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,2255,2258,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Total_Thickness,LOT002256,LOT002259
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,2286,2292,7,작은 평균 이동이 지속되고 있다.,Total_Thickness,LOT002287,LOT002293
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,2293,2298,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Total_Thickness,LOT002294,LOT002299
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2438,2447,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Total_Thickness,LOT002439,LOT002448
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,2563,2567,5,작은 평균 이동이 지속되고 있다.,Total_Thickness,LOT002564,LOT002568
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,2649,2653,5,작은 평균 이동이 지속되고 있다.,Total_Thickness,LOT002650,LOT002654
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,2744,2746,3,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Total_Thickness,LOT002745,LOT002747
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,2796,2800,5,작은 평균 이동이 지속되고 있다.,Total_Thickness,LOT002797,LOT002801
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2861,2861,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Total_Thickness,LOT002862,LOT002862
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2876,2886,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Total_Thickness,LOT002877,LOT002887
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2891,2891,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Total_Thickness,LOT002892,LOT002892
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3087,3087,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Total_Thickness,LOT003088,LOT003088
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,3393,3397,5,작은 평균 이동이 지속되고 있다.,Total_Thickness,LOT003394,LOT003398
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,3412,3414,3,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Total_Thickness,LOT003413,LOT003415
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,3499,3502,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Total_Thickness,LOT003500,LOT003503
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3668,3668,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Total_Thickness,LOT003669,LOT003669
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,3708,3712,5,작은 평균 이동이 지속되고 있다.,Total_Thickness,LOT003709,LOT003713
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,3805,3810,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Total_Thickness,LOT003806,LOT003811
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,4115,4120,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Total_Thickness,LOT004116,LOT004121
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,4253,4256,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Total_Thickness,LOT004254,LOT004257
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,4388,4393,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Total_Thickness,LOT004389,LOT004394
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4392,4402,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Total_Thickness,LOT004393,LOT004403
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,4517,4521,5,작은 평균 이동이 지속되고 있다.,Total_Thickness,LOT004518,LOT004522
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,4584,4598,15,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Total_Thickness,LOT004585,LOT004599
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,4645,4660,16,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Total_Thickness,LOT004646,LOT004661
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,4672,4677,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Total_Thickness,LOT004673,LOT004678
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,4697,4702,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Total_Thickness,LOT004698,LOT004703
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,4874,4889,16,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Total_Thickness,LOT004875,LOT004890
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,4963,4983,21,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Total_Thickness,LOT004964,LOT004984
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,5080,5097,18,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Total_Thickness,LOT005081,LOT005098
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5109,5119,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Total_Thickness,LOT005110,LOT005120
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,5134,5139,6,작은 평균 이동이 지속되고 있다.,Total_Thickness,LOT005135,LOT005140
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,5135,5138,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Total_Thickness,LOT005136,LOT005139
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,5156,5160,5,작은 평균 이동이 지속되고 있다.,Total_Thickness,LOT005157,LOT005161
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,5387,5392,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Total_Thickness,LOT005388,LOT005393
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,5479,5482,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Total_Thickness,LOT005480,LOT005483
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,5502,5507,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Total_Thickness,LOT005503,LOT005508
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5542,5542,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Total_Thickness,LOT005543,LOT005543
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,5557,5561,5,작은 평균 이동이 지속되고 있다.,Total_Thickness,LOT005558,LOT005562
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,5676,5682,7,작은 평균 이동이 지속되고 있다.,Total_Thickness,LOT005677,LOT005683
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,5702,5707,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Total_Thickness,LOT005703,LOT005708
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,5703,5718,16,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Total_Thickness,LOT005704,LOT005719
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,5731,5737,7,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Total_Thickness,LOT005732,LOT005738
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,5947,5950,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Total_Thickness,LOT005948,LOT005951
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,5983,5986,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Total_Thickness,LOT005984,LOT005987
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,5997,6012,16,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Total_Thickness,LOT005998,LOT006013
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,6072,6076,5,작은 평균 이동이 지속되고 있다.,Total_Thickness,LOT006073,LOT006077
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6086,6086,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Total_Thickness,LOT006087,LOT006087
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6271,6281,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Total_Thickness,LOT006272,LOT006282
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,6296,6302,7,작은 평균 이동이 지속되고 있다.,Total_Thickness,LOT006297,LOT006303
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6350,6350,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Total_Thickness,LOT006351,LOT006351
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6479,6479,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Total_Thickness,LOT006480,LOT006480
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,6480,6484,5,작은 평균 이동이 지속되고 있다.,Total_Thickness,LOT006481,LOT006485
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,6489,6506,18,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Total_Thickness,LOT006490,LOT006507
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,6496,6501,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Total_Thickness,LOT006497,LOT006502
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,6546,6570,25,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Total_Thickness,LOT006547,LOT006571
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,6646,6651,6,작은 평균 이동이 지속되고 있다.,Total_Thickness,LOT006647,LOT006652
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,6733,6735,3,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Total_Thickness,LOT006734,LOT006736
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,6769,6783,15,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Total_Thickness,LOT006770,LOT006784
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,7034,7048,15,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Total_Thickness,LOT007035,LOT007049
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7035,7035,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Total_Thickness,LOT007036,LOT007036
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,7082,7089,8,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Total_Thickness,LOT007083,LOT007090
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,7146,7151,6,작은 평균 이동이 지속되고 있다.,Total_Thickness,LOT007147,LOT007152
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7243,7243,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Total_Thickness,LOT007244,LOT007244
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,7352,7358,7,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Total_Thickness,LOT007353,LOT007359
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7431,7431,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Total_Thickness,LOT007432,LOT007432
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,7494,7509,16,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Total_Thickness,LOT007495,LOT007510
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,7536,7551,16,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Total_Thickness,LOT007537,LOT007552
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7631,7640,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Total_Thickness,LOT007632,LOT007641
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,7645,7650,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Total_Thickness,LOT007646,LOT007651
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,7705,7710,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Total_Thickness,LOT007706,LOT007711
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,7717,7723,7,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Total_Thickness,LOT007718,LOT007724
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7735,7735,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Total_Thickness,LOT007736,LOT007736
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7740,7740,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Total_Thickness,LOT007741,LOT007741
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7791,7799,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Total_Thickness,LOT007792,LOT007800
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,7796,7800,5,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Total_Thickness,LOT007797,LOT007801
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,7824,7837,14,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Total_Thickness,LOT007825,LOT007838
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7878,7878,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Total_Thickness,LOT007879,LOT007879
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7902,7902,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Total_Thickness,LOT007903,LOT007903
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,7925,7938,14,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Total_Thickness,LOT007926,LOT007939
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,0,15,16,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000001,LOT000016
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,0,15,16,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT000001,LOT000016
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,16,16,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT000017,LOT000017
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,25,25,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT000026,LOT000026
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,28,28,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT000029,LOT000029
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,35,35,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT000036,LOT000036
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,56,80,25,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000057,LOT000081
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,56,80,25,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT000057,LOT000081
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,84,92,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000085,LOT000093
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,93,93,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT000094,LOT000094
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,123,137,15,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000124,LOT000138
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,123,137,15,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT000124,LOT000138
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,138,138,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT000139,LOT000139
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,138,144,7,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Yield,LOT000139,LOT000145
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,140,153,14,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000141,LOT000154
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,165,165,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT000166,LOT000166
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,171,183,13,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000172,LOT000184
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,188,197,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000189,LOT000198
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,213,213,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT000214,LOT000214
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,214,238,25,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000215,LOT000239
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,214,238,25,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT000215,LOT000239
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,241,241,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT000242,LOT000242
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,256,264,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000257,LOT000265
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,274,277,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Yield,LOT000275,LOT000278
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,275,275,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT000276,LOT000276
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,276,276,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT000277,LOT000277
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,277,296,20,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000278,LOT000297
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,277,296,20,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT000278,LOT000297
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,310,330,21,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000311,LOT000331
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,310,330,21,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT000311,LOT000331
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,332,360,29,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000333,LOT000361
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,332,360,29,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT000333,LOT000361
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,389,407,19,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT000390,LOT000408
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,395,407,13,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000396,LOT000408
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,409,429,21,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000410,LOT000430
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,409,429,21,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT000410,LOT000430
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,444,444,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT000445,LOT000445
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,445,485,41,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000446,LOT000486
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,445,485,41,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT000446,LOT000486
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,487,497,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000488,LOT000498
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,503,517,15,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000504,LOT000518
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,503,517,15,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT000504,LOT000518
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,530,530,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT000531,LOT000531
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,537,545,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000538,LOT000546
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,561,585,25,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000562,LOT000586
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,561,585,25,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT000562,LOT000586
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,605,632,28,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000606,LOT000633
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,605,632,28,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT000606,LOT000633
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,634,654,21,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000635,LOT000655
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,634,654,21,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT000635,LOT000655
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,641,647,7,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Yield,LOT000642,LOT000648
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,656,668,13,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000657,LOT000669
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,669,669,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT000670,LOT000670
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,676,676,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT000677,LOT000677
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,677,696,20,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000678,LOT000697
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,677,696,20,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT000678,LOT000697
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,697,697,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT000698,LOT000698
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,709,709,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT000710,LOT000710
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,735,749,15,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Yield,LOT000736,LOT000750
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,748,765,18,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000749,LOT000766
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,748,765,18,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT000749,LOT000766
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,766,766,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT000767,LOT000767
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,770,782,13,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000771,LOT000783
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,783,783,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT000784,LOT000784
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,784,798,15,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000785,LOT000799
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,784,798,15,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT000785,LOT000799
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,800,817,18,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000801,LOT000818
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,800,817,18,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT000801,LOT000818
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,819,831,13,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000820,LOT000832
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,832,832,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT000833,LOT000833
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,841,841,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT000842,LOT000842
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,850,858,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000851,LOT000859
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,870,901,32,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000871,LOT000902
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,870,901,32,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT000871,LOT000902
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,897,902,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Yield,LOT000898,LOT000903
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,916,916,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT000917,LOT000917
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,917,932,16,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000918,LOT000933
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,917,932,16,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT000918,LOT000933
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,933,933,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT000934,LOT000934
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,944,954,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000945,LOT000955
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,956,972,17,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000957,LOT000973
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,956,972,17,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT000957,LOT000973
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,977,977,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT000978,LOT000978
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,986,1000,15,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT000987,LOT001001
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1006,1025,20,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001007,LOT001026
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,1006,1025,20,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT001007,LOT001026
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1027,1046,20,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001028,LOT001047
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,1027,1046,20,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT001028,LOT001047
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1057,1096,40,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001058,LOT001097
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,1057,1079,23,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT001058,LOT001080
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,1081,1096,16,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT001082,LOT001097
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1101,1101,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001102,LOT001102
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1107,1107,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001108,LOT001108
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1110,1110,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001111,LOT001111
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1111,1120,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001112,LOT001121
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1127,1145,19,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001128,LOT001146
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,1127,1145,19,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT001128,LOT001146
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1146,1146,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001147,LOT001147
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1147,1159,13,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001148,LOT001160
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1164,1175,12,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001165,LOT001176
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,1181,1186,6,작은 평균 이동이 지속되고 있다.,Yield,LOT001182,LOT001187
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,1182,1185,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Yield,LOT001183,LOT001186
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1183,1183,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001184,LOT001184
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1184,1184,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001185,LOT001185
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1189,1201,13,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001190,LOT001202
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1210,1210,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001211,LOT001211
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1216,1216,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001217,LOT001217
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1217,1233,17,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001218,LOT001234
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1235,1245,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001236,LOT001246
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1248,1262,15,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001249,LOT001263
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,1248,1262,15,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT001249,LOT001263
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,1249,1262,14,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Yield,LOT001250,LOT001263
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,1273,1286,14,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Yield,LOT001274,LOT001287
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1278,1278,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001279,LOT001279
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1279,1288,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001280,LOT001289
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1295,1295,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001296,LOT001296
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1301,1301,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001302,LOT001302
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1317,1317,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001318,LOT001318
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1318,1331,14,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001319,LOT001332
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1332,1332,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001333,LOT001333
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1337,1345,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001338,LOT001346
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1349,1349,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001350,LOT001350
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1350,1360,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001351,LOT001361
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1375,1375,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001376,LOT001376
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1387,1387,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001388,LOT001388
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1390,1407,18,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001391,LOT001408
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,1390,1407,18,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT001391,LOT001408
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1417,1429,13,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001418,LOT001430
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1455,1471,17,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001456,LOT001472
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,1455,1471,17,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT001456,LOT001472
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1472,1472,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001473,LOT001473
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1477,1487,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001478,LOT001488
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1522,1522,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001523,LOT001523
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1533,1552,20,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001534,LOT001553
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,1533,1552,20,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT001534,LOT001553
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1560,1569,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001561,LOT001570
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1576,1576,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001577,LOT001577
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1577,1586,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001578,LOT001587
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1587,1587,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001588,LOT001588
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1595,1623,29,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001596,LOT001624
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,1595,1623,29,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT001596,LOT001624
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1624,1624,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001625,LOT001625
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,1624,1626,3,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Yield,LOT001625,LOT001627
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1626,1626,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001627,LOT001627
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1627,1651,25,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001628,LOT001652
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1664,1680,17,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001665,LOT001681
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,1664,1680,17,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT001665,LOT001681
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1686,1686,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001687,LOT001687
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1696,1696,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001697,LOT001697
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1707,1707,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001708,LOT001708
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1710,1710,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001711,LOT001711
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1714,1714,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001715,LOT001715
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1727,1727,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001728,LOT001728
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1737,1759,23,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001738,LOT001760
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,1745,1759,15,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT001746,LOT001760
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1760,1760,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001761,LOT001761
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1764,1764,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001765,LOT001765
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1773,1773,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001774,LOT001774
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1776,1787,12,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001777,LOT001788
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,1800,1803,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Yield,LOT001801,LOT001804
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1801,1801,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001802,LOT001802
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1802,1802,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001803,LOT001803
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1803,1827,25,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001804,LOT001828
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,1803,1827,25,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT001804,LOT001828
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1836,1856,21,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001837,LOT001857
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,1836,1856,21,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT001837,LOT001857
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,1840,1845,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Yield,LOT001841,LOT001846
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1857,1857,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001858,LOT001858
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1865,1865,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001866,LOT001866
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1875,1886,12,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001876,LOT001887
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1887,1887,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001888,LOT001888
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1896,1896,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001897,LOT001897
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1903,1903,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001904,LOT001904
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1929,1929,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001930,LOT001930
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1936,1936,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001937,LOT001937
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1943,1955,13,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001944,LOT001956
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,1956,1956,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT001957,LOT001957
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1962,1985,24,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001963,LOT001986
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,1962,1985,24,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT001963,LOT001986
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,1990,2002,13,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT001991,LOT002003
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,1998,2003,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Yield,LOT001999,LOT002004
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2007,2019,13,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002008,LOT002020
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2044,2057,14,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002045,LOT002058
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2059,2059,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002060,LOT002060
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2065,2065,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002066,LOT002066
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2072,2072,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002073,LOT002073
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2078,2090,13,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002079,LOT002091
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2101,2109,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002102,LOT002110
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2111,2121,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002112,LOT002122
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2122,2122,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002123,LOT002123
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2123,2133,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002124,LOT002134
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2135,2143,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002136,LOT002144
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2144,2144,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002145,LOT002145
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2153,2153,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002154,LOT002154
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2154,2173,20,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002155,LOT002174
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,2154,2173,20,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT002155,LOT002174
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2176,2176,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002177,LOT002177
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2199,2214,16,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002200,LOT002215
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,2199,2214,16,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT002200,LOT002215
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2216,2226,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002217,LOT002227
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2228,2242,15,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002229,LOT002243
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,2228,2242,15,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT002229,LOT002243
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2244,2256,13,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002245,LOT002257
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2275,2275,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002276,LOT002276
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2276,2296,21,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002277,LOT002297
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2297,2297,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002298,LOT002298
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2307,2322,16,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002308,LOT002323
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,2307,2322,16,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT002308,LOT002323
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2327,2352,26,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002328,LOT002353
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,2327,2352,26,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT002328,LOT002353
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2354,2372,19,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002355,LOT002373
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,2354,2372,19,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT002355,LOT002373
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2373,2373,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002374,LOT002374
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2413,2413,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002414,LOT002414
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2414,2423,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002415,LOT002424
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2440,2451,12,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002441,LOT002452
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2453,2453,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002454,LOT002454
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,2453,2455,3,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Yield,LOT002454,LOT002456
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2455,2455,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002456,LOT002456
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2472,2472,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002473,LOT002473
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2477,2486,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002478,LOT002487
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,2515,2520,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Yield,LOT002516,LOT002521
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2520,2520,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002521,LOT002521
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2521,2544,24,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002522,LOT002545
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,2521,2544,24,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT002522,LOT002545
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2545,2545,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002546,LOT002546
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2551,2560,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002552,LOT002561
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2574,2574,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002575,LOT002575
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2577,2577,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002578,LOT002578
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2604,2614,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002605,LOT002615
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2615,2615,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002616,LOT002616
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2619,2627,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002620,LOT002628
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2636,2636,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002637,LOT002637
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2637,2657,21,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002638,LOT002658
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,2637,2659,23,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT002638,LOT002660
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2661,2675,15,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002662,LOT002676
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,2661,2675,15,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT002662,LOT002676
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2684,2694,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002685,LOT002695
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2695,2695,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002696,LOT002696
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2696,2706,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002697,LOT002707
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2714,2728,15,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002715,LOT002729
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,2714,2728,15,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT002715,LOT002729
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,2728,2731,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Yield,LOT002729,LOT002732
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2729,2729,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002730,LOT002730
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2730,2730,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002731,LOT002731
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2734,2734,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002735,LOT002735
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2761,2777,17,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002762,LOT002778
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,2761,2777,17,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT002762,LOT002778
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2778,2778,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002779,LOT002779
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2785,2794,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002786,LOT002795
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,2785,2798,14,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Yield,LOT002786,LOT002799
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2795,2795,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002796,LOT002796
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2796,2819,24,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002797,LOT002820
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,2796,2819,24,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT002797,LOT002820
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2820,2820,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002821,LOT002821
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2840,2854,15,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002841,LOT002855
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,2840,2854,15,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT002841,LOT002855
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2874,2890,17,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002875,LOT002891
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,2874,2890,17,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT002875,LOT002891
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2891,2891,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002892,LOT002892
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2897,2905,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002898,LOT002906
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2908,2908,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002909,LOT002909
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2919,2919,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002920,LOT002920
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2920,2931,12,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002921,LOT002932
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2933,2933,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002934,LOT002934
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2949,2949,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002950,LOT002950
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2957,2957,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002958,LOT002958
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2961,2961,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002962,LOT002962
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,2962,2976,15,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT002963,LOT002977
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,2962,2976,15,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT002963,LOT002977
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2985,2985,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002986,LOT002986
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,2998,2998,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT002999,LOT002999
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3029,3037,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003030,LOT003038
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3041,3056,16,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003042,LOT003057
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,3041,3056,16,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT003042,LOT003057
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3062,3062,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT003063,LOT003063
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3071,3084,14,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003072,LOT003085
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,3080,3095,16,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Yield,LOT003081,LOT003096
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3086,3101,16,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003087,LOT003102
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,3086,3101,16,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT003087,LOT003102
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3103,3103,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT003104,LOT003104
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3114,3114,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT003115,LOT003115
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3115,3125,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003116,LOT003126
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3127,3140,14,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003128,LOT003141
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3141,3141,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT003142,LOT003142
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3157,3186,30,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003158,LOT003187
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,3157,3185,29,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT003158,LOT003186
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3188,3211,24,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003189,LOT003212
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,3188,3214,27,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT003189,LOT003215
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3232,3240,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003233,LOT003241
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3241,3241,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT003242,LOT003242
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3244,3260,17,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003245,LOT003261
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,3244,3260,17,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT003245,LOT003261
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3261,3261,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT003262,LOT003262
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3272,3272,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT003273,LOT003273
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3294,3322,29,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003295,LOT003323
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,3294,3322,29,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT003295,LOT003323
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3324,3335,12,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003325,LOT003336
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3346,3346,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT003347,LOT003347
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3347,3355,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003348,LOT003356
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3368,3368,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT003369,LOT003369
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3375,3375,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT003376,LOT003376
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3385,3394,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003386,LOT003395
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3436,3449,14,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003437,LOT003450
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3460,3460,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT003461,LOT003461
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3461,3491,31,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003462,LOT003492
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,3461,3491,31,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT003462,LOT003492
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3492,3492,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT003493,LOT003493
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3497,3497,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT003498,LOT003498
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3498,3506,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003499,LOT003507
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3510,3510,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT003511,LOT003511
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3521,3529,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003522,LOT003530
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3531,3539,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003532,LOT003540
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3546,3546,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT003547,LOT003547
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3553,3553,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT003554,LOT003554
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3555,3567,13,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003556,LOT003568
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3596,3607,12,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003597,LOT003608
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3610,3610,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT003611,LOT003611
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3613,3635,23,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003614,LOT003636
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,3613,3635,23,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT003614,LOT003636
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3645,3645,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT003646,LOT003646
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,3652,3665,14,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Yield,LOT003653,LOT003666
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3661,3661,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT003662,LOT003662
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3667,3683,17,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003668,LOT003684
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,3667,3683,17,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT003668,LOT003684
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3685,3696,12,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003686,LOT003697
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3697,3697,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT003698,LOT003698
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3708,3729,22,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003709,LOT003730
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,3708,3729,22,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT003709,LOT003730
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3731,3742,12,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003732,LOT003743
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3765,3765,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT003766,LOT003766
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3766,3776,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003767,LOT003777
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3778,3788,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003779,LOT003789
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3814,3836,23,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003815,LOT003837
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,3821,3836,16,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT003822,LOT003837
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3837,3837,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT003838,LOT003838
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3841,3852,12,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003842,LOT003853
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3854,3863,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003855,LOT003864
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3865,3889,25,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003866,LOT003890
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,3865,3889,25,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT003866,LOT003890
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3890,3890,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT003891,LOT003891
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3922,3922,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT003923,LOT003923
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,3922,3924,3,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Yield,LOT003923,LOT003925
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3924,3924,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT003925,LOT003925
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3925,3936,12,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003926,LOT003937
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3937,3937,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT003938,LOT003938
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3939,3954,16,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003940,LOT003955
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,3939,3954,16,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT003940,LOT003955
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3956,3967,12,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003957,LOT003968
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3969,3969,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT003970,LOT003970
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3970,3978,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003971,LOT003979
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,3980,3980,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT003981,LOT003981
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,3995,4021,27,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT003996,LOT004022
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,3995,4021,27,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT003996,LOT004022
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4025,4025,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004026,LOT004026
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4026,4040,15,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004027,LOT004041
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,4026,4040,15,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT004027,LOT004041
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4052,4064,13,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004053,LOT004065
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4065,4065,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004066,LOT004066
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4081,4092,12,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004082,LOT004093
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4093,4093,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004094,LOT004094
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4096,4105,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004097,LOT004106
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,4105,4108,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Yield,LOT004106,LOT004109
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4106,4106,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004107,LOT004107
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4107,4107,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004108,LOT004108
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4108,4123,16,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004109,LOT004124
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4129,4129,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004130,LOT004130
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4130,4151,22,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004131,LOT004152
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,4130,4151,22,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT004131,LOT004152
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4153,4171,19,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004154,LOT004172
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,4153,4169,17,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT004154,LOT004170
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4178,4178,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004179,LOT004179
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4187,4187,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004188,LOT004188
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4196,4211,16,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004197,LOT004212
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4219,4227,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004220,LOT004228
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4228,4228,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004229,LOT004229
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4229,4244,16,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004230,LOT004245
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,4229,4244,16,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT004230,LOT004245
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4245,4245,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004246,LOT004246
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4249,4281,33,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004250,LOT004282
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,4249,4281,33,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT004250,LOT004282
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4296,4296,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004297,LOT004297
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4297,4318,22,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004298,LOT004319
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,4297,4318,22,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT004298,LOT004319
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4320,4333,14,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004321,LOT004334
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4352,4360,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004353,LOT004361
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4400,4410,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004401,LOT004411
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4423,4423,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004424,LOT004424
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4424,4435,12,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004425,LOT004436
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,4424,4439,16,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Yield,LOT004425,LOT004440
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4437,4477,41,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004438,LOT004478
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,4437,4477,41,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT004438,LOT004478
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4489,4489,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004490,LOT004490
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4490,4500,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004491,LOT004501
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4519,4540,22,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004520,LOT004541
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,4519,4540,22,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT004520,LOT004541
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4541,4541,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004542,LOT004542
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4547,4559,13,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004548,LOT004560
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4561,4571,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004562,LOT004572
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,4571,4585,15,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Yield,LOT004572,LOT004586
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4582,4582,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004583,LOT004583
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,4582,4584,3,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Yield,LOT004583,LOT004585
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4584,4584,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004585,LOT004585
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4594,4594,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004595,LOT004595
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4595,4616,22,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004596,LOT004617
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,4595,4616,22,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT004596,LOT004617
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4641,4657,17,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004642,LOT004658
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,4641,4657,17,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT004642,LOT004658
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4671,4685,15,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004672,LOT004686
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,4671,4685,15,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT004672,LOT004686
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4686,4686,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004687,LOT004687
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4687,4698,12,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004688,LOT004699
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4701,4717,17,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004702,LOT004718
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,4701,4717,17,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT004702,LOT004718
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,4725,4730,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Yield,LOT004726,LOT004731
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4741,4741,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004742,LOT004742
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4742,4754,13,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004743,LOT004755
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4755,4755,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004756,LOT004756
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4759,4776,18,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004760,LOT004777
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,4759,4776,18,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT004760,LOT004777
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,4777,4783,7,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Yield,LOT004778,LOT004784
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,4784,4787,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Yield,LOT004785,LOT004788
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4785,4785,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004786,LOT004786
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4786,4786,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004787,LOT004787
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4789,4789,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004790,LOT004790
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4790,4799,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004791,LOT004800
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4807,4831,25,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004808,LOT004832
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,4807,4831,25,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT004808,LOT004832
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4839,4839,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004840,LOT004840
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4845,4845,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004846,LOT004846
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4846,4863,18,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004847,LOT004864
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,4847,4863,17,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT004848,LOT004864
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4879,4904,26,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004880,LOT004905
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,4910,4915,6,작은 평균 이동이 지속되고 있다.,Yield,LOT004911,LOT004916
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,4912,4915,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Yield,LOT004913,LOT004916
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4913,4913,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004914,LOT004914
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4914,4914,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004915,LOT004915
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4916,4924,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004917,LOT004925
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,4924,4927,4,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Yield,LOT004925,LOT004928
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4925,4925,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004926,LOT004926
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4926,4926,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004927,LOT004927
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4927,4941,15,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004928,LOT004942
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,4927,4978,52,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT004928,LOT004979
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4943,4978,36,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004944,LOT004979
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,4978,4991,14,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Yield,LOT004979,LOT004992
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4979,4979,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004980,LOT004980
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,4980,4993,14,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT004981,LOT004994
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4994,4994,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT004995,LOT004995
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,4999,4999,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005000,LOT005000
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5003,5011,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005004,LOT005012
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5012,5012,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005013,LOT005013
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5025,5045,21,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005026,LOT005046
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,5030,5045,16,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT005031,LOT005046
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,5033,5040,8,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Yield,LOT005034,LOT005041
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5051,5051,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005052,LOT005052
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5052,5062,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005053,LOT005063
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5069,5085,17,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005070,LOT005086
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,5069,5085,17,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT005070,LOT005086
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5087,5106,20,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005088,LOT005107
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,5087,5106,20,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT005088,LOT005107
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,5108,5123,16,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT005109,LOT005124
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5124,5124,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005125,LOT005125
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5125,5145,21,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005126,LOT005146
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,5125,5145,21,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT005126,LOT005146
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5167,5167,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005168,LOT005168
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5169,5179,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005170,LOT005180
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5180,5180,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005181,LOT005181
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5185,5194,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005186,LOT005195
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5209,5222,14,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005210,LOT005223
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5223,5223,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005224,LOT005224
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5224,5252,29,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005225,LOT005253
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,5224,5252,29,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT005225,LOT005253
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5262,5262,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005263,LOT005263
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5278,5278,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005279,LOT005279
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5305,5315,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005306,LOT005316
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5320,5329,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005321,LOT005330
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5338,5338,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005339,LOT005339
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5341,5341,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005342,LOT005342
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5342,5359,18,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005343,LOT005360
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,5342,5359,18,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT005343,LOT005360
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5367,5367,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005368,LOT005368
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5368,5413,46,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005369,LOT005414
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,5375,5428,54,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT005376,LOT005429
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5415,5428,14,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005416,LOT005429
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5430,5430,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005431,LOT005431
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5431,5444,14,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005432,LOT005445
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5458,5483,26,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005459,LOT005484
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,5458,5483,26,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT005459,LOT005484
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5488,5522,35,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005489,LOT005523
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,5488,5522,35,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT005489,LOT005523
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5523,5523,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005524,LOT005524
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5530,5530,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005531,LOT005531
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5537,5537,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005538,LOT005538
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5551,5551,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005552,LOT005552
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5552,5562,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005553,LOT005563
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,5562,5576,15,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Yield,LOT005563,LOT005577
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5563,5563,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005564,LOT005564
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5564,5574,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005565,LOT005575
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5581,5594,14,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005582,LOT005595
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5595,5595,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005596,LOT005596
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5596,5609,14,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005597,LOT005610
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5611,5627,17,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005612,LOT005628
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,5611,5627,17,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT005612,LOT005628
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5628,5628,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005629,LOT005629
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5631,5644,14,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005632,LOT005645
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5653,5653,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005654,LOT005654
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5654,5670,17,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005655,LOT005671
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,5654,5670,17,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT005655,LOT005671
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5671,5671,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005672,LOT005672
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5683,5683,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005684,LOT005684
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5690,5718,29,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005691,LOT005719
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,5690,5718,29,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT005691,LOT005719
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5721,5734,14,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005722,LOT005735
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5753,5766,14,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005754,LOT005767
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5772,5772,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005773,LOT005773
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5777,5791,15,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005778,LOT005792
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,5777,5791,15,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT005778,LOT005792
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5794,5794,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005795,LOT005795
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5795,5803,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005796,LOT005804
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5809,5809,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005810,LOT005810
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5810,5820,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005811,LOT005821
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5824,5824,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005825,LOT005825
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5825,5835,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005826,LOT005836
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5837,5850,14,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005838,LOT005851
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5861,5870,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005862,LOT005871
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5871,5871,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005872,LOT005872
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5874,5891,18,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005875,LOT005892
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,5874,5891,18,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT005875,LOT005892
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5900,5908,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005901,LOT005909
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,5917,5917,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT005918,LOT005918
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5918,5929,12,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005919,LOT005930
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5931,5940,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005932,LOT005941
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5955,5963,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005956,LOT005964
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,5975,6009,35,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT005976,LOT006010
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,5975,6009,35,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT005976,LOT006010
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6044,6044,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006045,LOT006045
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6052,6052,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006053,LOT006053
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6064,6073,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006065,LOT006074
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,6064,6080,17,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT006065,LOT006081
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6081,6081,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006082,LOT006082
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6087,6087,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006088,LOT006088
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6088,6101,14,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006089,LOT006102
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6113,6113,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006114,LOT006114
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6120,6133,14,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006121,LOT006134
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6141,6154,14,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006142,LOT006155
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6156,6164,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006157,LOT006165
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,6164,6177,14,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Yield,LOT006165,LOT006178
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6165,6165,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006166,LOT006166
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6174,6186,13,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006175,LOT006187
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6188,6204,17,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006189,LOT006205
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,6188,6204,17,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT006189,LOT006205
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6215,6215,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006216,LOT006216
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6217,6226,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006218,LOT006227
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6231,6231,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006232,LOT006232
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6241,6249,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006242,LOT006250
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6251,6266,16,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006252,LOT006267
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,6251,6266,16,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT006252,LOT006267
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6281,6290,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006282,LOT006291
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6292,6314,23,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006293,LOT006315
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,6292,6314,23,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT006293,LOT006315
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6345,6345,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006346,LOT006346
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6349,6374,26,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006350,LOT006375
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,6349,6374,26,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT006350,LOT006375
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6378,6378,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006379,LOT006379
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6385,6397,13,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006386,LOT006398
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6398,6398,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006399,LOT006399
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6399,6410,12,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006400,LOT006411
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6413,6424,12,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006414,LOT006425
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,6419,6424,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Yield,LOT006420,LOT006425
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6431,6431,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006432,LOT006432
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6432,6452,21,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006433,LOT006453
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,6432,6452,21,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT006433,LOT006453
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,6448,6453,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Yield,LOT006449,LOT006454
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6459,6459,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006460,LOT006460
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6460,6473,14,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006461,LOT006474
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6479,6489,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006480,LOT006490
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6497,6497,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006498,LOT006498
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6503,6511,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006504,LOT006512
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6521,6521,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006522,LOT006522
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6536,6546,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006537,LOT006547
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6548,6548,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006549,LOT006549
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6555,6555,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006556,LOT006556
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6571,6571,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006572,LOT006572
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6578,6578,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006579,LOT006579
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6579,6588,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006580,LOT006589
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6610,6610,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006611,LOT006611
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6617,6617,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006618,LOT006618
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6618,6642,25,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006619,LOT006643
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,6618,6642,25,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT006619,LOT006643
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6643,6643,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006644,LOT006644
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6649,6657,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006650,LOT006658
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6659,6667,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006660,LOT006668
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6668,6668,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006669,LOT006669
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6684,6684,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006685,LOT006685
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,6689,6694,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Yield,LOT006690,LOT006695
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6691,6703,13,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006692,LOT006704
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,6691,6710,20,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT006692,LOT006711
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6711,6711,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006712,LOT006712
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,6711,6713,3,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Yield,LOT006712,LOT006714
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6713,6713,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006714,LOT006714
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6735,6735,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006736,LOT006736
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6743,6754,12,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006744,LOT006755
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6756,6764,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006757,LOT006765
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6781,6798,18,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006782,LOT006799
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,6781,6798,18,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT006782,LOT006799
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6800,6809,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006801,LOT006810
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6816,6816,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006817,LOT006817
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6858,6858,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006859,LOT006859
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6865,6865,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006866,LOT006866
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6866,6890,25,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006867,LOT006891
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,6866,6890,25,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT006867,LOT006891
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6892,6910,19,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006893,LOT006911
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,6892,6910,19,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT006893,LOT006911
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6911,6911,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006912,LOT006912
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6924,6933,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006925,LOT006934
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6949,6949,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006950,LOT006950
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6954,6975,22,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006955,LOT006976
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,6954,6989,36,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT006955,LOT006990
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6977,6989,13,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006978,LOT006990
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,6990,6990,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT006991,LOT006991
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,6991,7012,22,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT006992,LOT007013
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,6991,7015,25,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT006992,LOT007016
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7022,7022,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007023,LOT007023
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7023,7035,13,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007024,LOT007036
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7048,7059,12,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007049,LOT007060
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7060,7060,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007061,LOT007061
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7066,7087,22,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007067,LOT007088
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,7066,7087,22,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT007067,LOT007088
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7091,7091,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007092,LOT007092
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7105,7105,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007106,LOT007106
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7109,7109,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007110,LOT007110
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7117,7117,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007118,LOT007118
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7124,7132,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007125,LOT007133
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7133,7133,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007134,LOT007134
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7172,7189,18,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007173,LOT007190
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,7172,7189,18,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT007173,LOT007190
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7190,7190,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007191,LOT007191
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7191,7209,19,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007192,LOT007210
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,7191,7209,19,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT007192,LOT007210
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7212,7212,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007213,LOT007213
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7213,7221,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007214,LOT007222
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7222,7222,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007223,LOT007223
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7232,7232,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007233,LOT007233
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,7232,7234,3,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Yield,LOT007233,LOT007235
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7234,7234,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007235,LOT007235
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7236,7244,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007237,LOT007245
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7245,7245,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007246,LOT007246
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7251,7251,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007252,LOT007252
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7255,7255,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007256,LOT007256
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7265,7265,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007266,LOT007266
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7283,7312,30,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007284,LOT007313
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,7283,7304,22,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT007284,LOT007305
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7314,7323,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007315,LOT007324
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7353,7364,12,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007354,LOT007365
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7365,7365,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007366,LOT007366
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7366,7378,13,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007367,LOT007379
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7390,7390,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007391,LOT007391
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7394,7394,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007395,LOT007395
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7408,7416,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007409,LOT007417
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7426,7426,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007427,LOT007427
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7427,7438,12,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007428,LOT007439
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,7428,7433,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Yield,LOT007429,LOT007434
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7439,7439,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007440,LOT007440
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7440,7450,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007441,LOT007451
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7463,7463,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007464,LOT007464
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7470,7470,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007471,LOT007471
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7480,7480,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007481,LOT007481
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7485,7485,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007486,LOT007486
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7489,7504,16,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007490,LOT007505
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,7489,7504,16,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT007490,LOT007505
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7505,7505,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007506,LOT007506
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7508,7516,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007509,LOT007517
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7518,7526,9,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007519,LOT007527
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7537,7537,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007538,LOT007538
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7542,7542,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007543,LOT007543
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7548,7595,48,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007549,LOT007596
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,7548,7579,32,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT007549,LOT007580
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,7571,7576,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Yield,LOT007572,LOT007577
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,7581,7595,15,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT007582,LOT007596
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7598,7611,14,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007599,LOT007612
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7615,7615,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007616,LOT007616
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,7617,7622,6,작은 평균 이동이 지속되고 있다.,Yield,LOT007618,LOT007623
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7640,7640,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007641,LOT007641
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7646,7659,14,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007647,LOT007660
+4,NELSON_RULE_4,14점 연속 교대 증감,WATCH,7660,7673,14,교대 패턴. 두 설비 또는 두 작업조가 번갈아 투입되는 층별 요인을 본다.,Yield,LOT007661,LOT007674
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7670,7679,10,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007671,LOT007680
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7683,7701,19,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007684,LOT007702
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,7683,7701,19,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT007684,LOT007702
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7702,7702,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007703,LOT007703
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7703,7713,11,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007704,LOT007714
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,7703,7728,26,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT007704,LOT007729
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7715,7728,14,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007716,LOT007729
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7748,7748,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007749,LOT007749
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,7749,7763,15,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT007750,LOT007764
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7770,7770,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007771,LOT007771
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7771,7795,25,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007772,LOT007796
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,7771,7795,25,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT007772,LOT007796
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7798,7798,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007799,LOT007799
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,7798,7804,7,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Yield,LOT007799,LOT007805
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7800,7800,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007801,LOT007801
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7802,7802,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007803,LOT007803
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7804,7804,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007805,LOT007805
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7816,7833,18,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007817,LOT007834
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,7816,7833,18,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT007817,LOT007834
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7841,7868,28,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007842,LOT007869
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,7841,7868,28,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT007842,LOT007869
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,7846,7851,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Yield,LOT007847,LOT007852
+6,NELSON_RULE_6,5점 중 4점이 같은 쪽 1시그마 밖,WATCH,7869,7873,5,작은 평균 이동이 지속되고 있다.,Yield,LOT007870,LOT007874
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7870,7870,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007871,LOT007871
+5,NELSON_RULE_5,3점 중 2점이 같은 쪽 2시그마 밖,WARNING,7870,7872,3,평균 이동의 조기 신호. 규칙 2보다 빠르게 잡힌다.,Yield,LOT007871,LOT007873
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7872,7872,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007873,LOT007873
+3,NELSON_RULE_3,6점 연속 증가 또는 감소,WARNING,7872,7877,6,"추세가 있다. 공구 마모, 약액 농도 저하, 필터 막힘 같은 점진적 열화를 본다.",Yield,LOT007873,LOT007878
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7880,7880,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007881,LOT007881
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7884,7914,31,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007885,LOT007915
+7,NELSON_RULE_7,15점 연속 1시그마 안,WATCH,7884,7914,31,산포가 비정상적으로 작다. 부분군 층별 오류나 데이터 가공을 의심한다.,Yield,LOT007885,LOT007915
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7945,7945,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007946,LOT007946
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7947,7961,15,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007948,LOT007962
+1,NELSON_RULE_1,1점이 3시그마를 벗어남,CRITICAL,7965,7965,1,"급격한 단일 이상. 설비 이벤트, 측정 오류, 자재 교체 시점을 확인한다.",Yield,LOT007966,LOT007966
+2,NELSON_RULE_2,9점 연속 중심선 한쪽,WARNING,7971,7983,13,"공정 평균이 이동했다. 조건 변경, 자재 LOT 교체, 설비 정비 이력을 본다.",Yield,LOT007972,LOT007984
