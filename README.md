@@ -55,6 +55,33 @@ python -m pip install -r requirements.txt
 python -m streamlit run src/dashboard/app.py
 ```
 
+## 품질 분석 화면
+
+Streamlit 대시보드의 **품질 분석** 탭에서 아래 내용을 화면으로 볼 수 있습니다.
+명령줄 `python -m src.quality.run_quality_analysis` 와 같은 계산을 사용하고
+출력 형태만 다릅니다.
+
+```bash
+python -m streamlit run src/dashboard/app.py
+```
+
+사이드바에서 **기존 통계·ML (학습용)** 을 고른 뒤 **품질 분석** 탭을 엽니다.
+
+| 하위 탭 | 내용 |
+| --- | --- |
+| 공정능력 | 특성 선택 -> Cp/Cpk/Pp/Ppk 지표, 규격선이 표시된 분포, 해석 문장 |
+| 관리도 | 설비·항목 선택 -> 1·2 시그마 구역이 깔린 I 관리도, 판정 규칙 위반 구간 음영, 규칙별 관측 대 기대 오경보 표, MR 관리도, 불량률 p 관리도 |
+| 설비 비교 | 인자·특성 선택 -> 분산분석 결과와 등분산 판정, 유의할 때만 Tukey HSD 신뢰구간 그래프 |
+| 측정시스템 | Gage R&R 분산 성분 막대, 작업자별 시료 측정 평균(교호작용 확인), 분산분석표, 편향·선형성 회귀 |
+| 모델 운전점 | 더미 대비 PR-AUC, 검출률 대 과검률 상충 곡선, 목표 검출률별 선택표 |
+
+측정시스템 탭은 `Data/msa_*.csv`, 모델 운전점 탭은 `report/model_*.csv` 가
+있어야 표시됩니다. 없으면 화면에 생성 명령을 안내합니다.
+
+차트 색은 역할로 고정되어 있습니다. 계열 색과 상태 색(좋음·주의·심각·위험)을
+섞어 쓰지 않고, 판정은 색과 글자를 함께 표시해 색만으로 뜻을 전하지 않습니다.
+한글 축 이름은 `assets/fonts/NanumGothic.ttf` 를 matplotlib 에 등록해 처리합니다.
+
 ## 품질 분석 모듈 (src/quality)
 
 JMP 로 수행하던 통계 분석을 코드로 옮긴 모듈입니다. 실행은 아래 한 줄입니다.

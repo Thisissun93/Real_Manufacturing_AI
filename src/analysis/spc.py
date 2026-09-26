@@ -49,6 +49,7 @@ from src.quality.nelson_rules import (
     evaluate_chart,
     summarize_violations,
 )
+from src.utils.plotting import apply_chart_style
 
 
 SPC_COLUMNS = CAPABILITY_CHARACTERISTICS
@@ -126,6 +127,9 @@ def plot_control_chart(
     """
     values = chart.values[:max_points]
     zones = chart.sigma_zone_edges
+
+    # 한글 축 이름이 깨지지 않도록 번들 폰트를 등록한다.
+    apply_chart_style()
 
     figure, axes = plt.subplots(figsize=(14, 6))
 
