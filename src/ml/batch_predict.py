@@ -1,27 +1,17 @@
 from pathlib import Path
 
-import joblib
 import pandas as pd
+
+from src.ml.model_io import (
+    defect_probability,
+    get_positive_label,
+    get_threshold,
+    load_model_package,
+)
 
 
 def get_project_root() -> Path:
     return Path(__file__).resolve().parents[2]
-
-
-def load_model_package() -> dict:
-    model_path = (
-        get_project_root()
-        / "models"
-        / "random_forest_defect_model.joblib"
-    )
-
-    if not model_path.exists():
-        raise FileNotFoundError(
-            f"모델 파일이 없습니다: {model_path}\n"
-            "먼저 python -m src.ml.train_model 을 실행하세요."
-        )
-
-    return joblib.load(model_path)
 
 
 def load_input_data(file_path: Path) -> pd.DataFrame:
@@ -71,28 +61,24 @@ def predict_defects(
     model = model_package["model"]
     features = model_package["features"]
 
-    positive_label = model_package.get(
-        "positive_label", "Delamination"
-    )
-    threshold = float(
-        model_package.get("decision_threshold", 0.5)
-    )
+    positive_label = get_positive_label(model_package)
+    threshold = get_threshold(model_package)
 
     validate_features(df, features)
 
     input_x = df[features]
 
-    defect_probability = model.predict_proba(input_x)[:, 1]
+    probability = defect_probability(model, input_x, positive_label)
 
     result_df = df.copy()
 
     result_df[f"Probability_{positive_label}_%"] = (
-        defect_probability * 100
+        probability * 100
     ).round(3)
 
     result_df["Decision_Threshold_%"] = round(threshold * 100, 3)
 
-    is_flagged = defect_probability >= threshold
+    is_flagged = probability >= threshold
 
     result_df["Predicted_Defect"] = [
         positive_label if flag else "Normal" for flag in is_flagged
@@ -104,7 +90,7 @@ def predict_defects(
 
     # 임계값까지 남은 여유. 음수면 이미 임계값을 넘었다.
     result_df["Margin_To_Threshold_%"] = (
-        (threshold - defect_probability) * 100
+        (threshold - probability) * 100
     ).round(3)
 
     return result_df

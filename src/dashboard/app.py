@@ -6,12 +6,18 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.append(str(PROJECT_ROOT))
       
-import joblib
 import pandas as pd
 import streamlit as st
 
 from src.dashboard.quality_view import show_quality_analysis
 from src.data.loader import load_process_data
+from src.ml.model_io import (
+    defect_probability,
+    get_positive_label,
+    get_threshold,
+    is_legacy_package,
+    load_model_package as _load_model_package,
+)
 from src.process_spec import PROCESS_SPEC
 
 
@@ -29,21 +35,8 @@ def load_data() -> pd.DataFrame:
 
 @st.cache_resource
 def load_model_package() -> dict:
-    project_root = Path(__file__).resolve().parents[2]
-    model_path = (
-        project_root
-        / "models"
-        / "random_forest_defect_model.joblib"
-    )
-
-    if not model_path.exists():
-        raise FileNotFoundError(
-            "저장된 모델을 찾을 수 없습니다.\n"
-            "먼저 아래 명령을 실행하세요.\n"
-            "python -m src.ml.train_model"
-        )
-
-    return joblib.load(model_path)
+    """모델 패키지를 읽는다. 형식 호환 처리는 src.ml.model_io 가 담당한다."""
+    return _load_model_package()
 
 
 def apply_filters(df: pd.DataFrame) -> pd.DataFrame:
@@ -266,12 +259,15 @@ def show_defect_prediction() -> None:
     model = model_package["model"]
     model_features = model_package["features"]
 
-    positive_label = model_package.get(
-        "positive_label", "Delamination"
-    )
-    threshold = float(
-        model_package.get("decision_threshold", 0.5)
-    )
+    positive_label = get_positive_label(model_package)
+    threshold = get_threshold(model_package)
+
+    if is_legacy_package(model_package):
+        st.warning(
+            "이전 형식으로 저장된 모델입니다. 판정 임계값이 없어 0.5 가 "
+            "적용되며, 불량이 희소한 공정에서는 검출률이 크게 떨어집니다. "
+            "`python -m src.ml.train_model` 로 재학습하세요."
+        )
 
     st.caption(
         f"판정 임계값 {threshold * 100:.2f}% "
@@ -310,11 +306,11 @@ def show_defect_prediction() -> None:
         columns=model_features,
     )
 
-    defect_probability = float(
-        model.predict_proba(input_df)[0][1]
+    probability = float(
+        defect_probability(model, input_df, positive_label)[0]
     )
 
-    is_flagged = defect_probability >= threshold
+    is_flagged = probability >= threshold
 
     predicted_label = positive_label if is_flagged else "Normal"
 
@@ -322,8 +318,8 @@ def show_defect_prediction() -> None:
         {
             "Defect": [positive_label, "Normal"],
             "Probability_%": [
-                defect_probability * 100,
-                (1.0 - defect_probability) * 100,
+                probability * 100,
+                (1.0 - probability) * 100,
             ],
         }
     )
@@ -334,25 +330,25 @@ def show_defect_prediction() -> None:
 
     result_column2.metric(
         f"{positive_label} 확률",
-        f"{defect_probability * 100:.2f}%",
+        f"{probability * 100:.2f}%",
     )
 
     result_column3.metric(
         "임계값까지 여유",
-        f"{(threshold - defect_probability) * 100:+.2f}%p",
+        f"{(threshold - probability) * 100:+.2f}%p",
         help="음수이면 이미 임계값을 넘어 불량 위험으로 판정된 상태입니다.",
     )
 
     if is_flagged:
         st.error(
             f"예측 결과: {positive_label} 위험. "
-            f"확률 {defect_probability * 100:.2f}% 가 "
+            f"확률 {probability * 100:.2f}% 가 "
             f"임계값 {threshold * 100:.2f}% 이상입니다."
         )
     else:
         st.success(
             f"예측 결과: 정상 범위. "
-            f"확률 {defect_probability * 100:.2f}% 가 "
+            f"확률 {probability * 100:.2f}% 가 "
             f"임계값 {threshold * 100:.2f}% 미만입니다."
         )
 
@@ -385,28 +381,24 @@ def predict_batch(
     model = model_package["model"]
     features = model_package["features"]
 
-    positive_label = model_package.get(
-        "positive_label", "Delamination"
-    )
-    threshold = float(
-        model_package.get("decision_threshold", 0.5)
-    )
+    positive_label = get_positive_label(model_package)
+    threshold = get_threshold(model_package)
 
     input_x = df[features]
 
-    defect_probability = model.predict_proba(input_x)[:, 1]
-    is_flagged = defect_probability >= threshold
+    probability = defect_probability(model, input_x, positive_label)
+    is_flagged = probability >= threshold
 
     result_df = df.copy()
 
     result_df[f"Probability_{positive_label}_%"] = (
-        defect_probability * 100
+        probability * 100
     ).round(3)
 
     result_df["Decision_Threshold_%"] = round(threshold * 100, 3)
 
     result_df["Margin_To_Threshold_%"] = (
-        (threshold - defect_probability) * 100
+        (threshold - probability) * 100
     ).round(3)
 
     result_df["Predicted_Defect"] = [

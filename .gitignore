@@ -39,8 +39,14 @@ instance/
 samples/investigation/demo.json
 samples/investigation/evaluation_truth.json
 
-# 파이프라인 생성 산출물 (python -m src.pipeline.run_pipeline 으로 재생성)
-report/
+# 파이프라인 중간 산출물
+#
+# 주의: Data/, report/, models/ 의 결과 파일은 Git 에 포함시킨다.
+# Streamlit Cloud 배포판은 파이프라인을 실행하지 않고 저장소에 있는
+# 파일만 읽기 때문이다. 이 파일들을 무시하면 배포된 앱에서
+# 측정시스템 탭과 모델 운전점 탭이 비어 보인다.
+#
+# 용량이 큰 차트 이미지와 임시 파일만 제외한다.
 images/
-models/*.joblib
-Data/msa_*.csv
+report/temp/
+*.log
