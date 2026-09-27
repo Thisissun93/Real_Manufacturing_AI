@@ -19,6 +19,8 @@ PIPELINE_MODULES = [
     ("Train and Save Model", "src.ml.train_model"),
     ("Run SHAP Analysis", "src.ml.shap_analysis"),  # 필요 패키지: shap
     ("Run Batch Prediction", "src.ml.batch_predict"),
+    # 8D 는 품질 분석과 모델 운전점 결과를 모두 읽으므로 뒤쪽에 둔다.
+    ("Generate 8D Reports", "src.quality.run_eight_d"),
     ("Generate PDF Report", "src.report.pdf_report"),
 ]
 

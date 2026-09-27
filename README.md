@@ -1,8 +1,10 @@
 # Real Manufacturing Intelligence — Ver1.0
 
-[![앱 바로 실행](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://realmanufacturingai-xrwbpls76u46mbkshgmu64.streamlit.app/)
+[![앱 바로 실행](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://realmanufacturingai-gqmhke2ybcjhdrsndjsh2e.streamlit.app/)
 
 제작자: 김태양. ABF 제조 이력 조사·통계·예방보전 검토를 연결하는 공개용 합성 데이터 시연 프로그램입니다. 실제 제조사·장비 형식과 사내 양산 정보를 포함하지 않습니다.
+
+> 현재 로컬 검토판입니다. GitHub 업데이트 및 온라인 재배포는 보류 중입니다. 아래 실행 버튼은 기존 공개판으로 연결됩니다.
 
 ## 시작하기
 
@@ -72,6 +74,7 @@ python -m streamlit run src/dashboard/app.py
 | 설비 비교 | 인자·특성 선택 -> 분산분석 결과와 등분산 판정, 유의할 때만 Tukey HSD 신뢰구간 그래프 |
 | 측정시스템 | Gage R&R 분산 성분 막대, 작업자별 시료 측정 평균(교호작용 확인), 분산분석표, 편향·선형성 회귀 |
 | 모델 운전점 | 더미 대비 PR-AUC, 검출률 대 과검률 상충 곡선, 목표 검출률별 선택표 |
+| 8D 리포트 | 사례 선택 -> D0~D8 진행 현황, 5W2H 와 IS/IS-NOT, 발생원인·유출원인 5 Why, 6M 특성요인표, 규격 중심 대비 이탈 차트, 기준선 대비 현재 위치 |
 
 측정시스템 탭은 `Data/msa_*.csv`, 모델 운전점 탭은 `report/model_*.csv` 가
 있어야 표시됩니다. 없으면 화면에 생성 명령을 안내합니다.
@@ -96,6 +99,63 @@ python -m src.quality.run_quality_analysis
 | `msa.py` | Gage R&R(ANOVA 법), 편향(Bias), 선형성(Linearity) |
 | `anova.py` | 일원분산분석, Levene 등분산 검정, Welch ANOVA, Tukey HSD |
 | `constants.py` | 관리도 계수표 (d2, d3, c4, A2, D3, D4, B3, B4) |
+| `eight_d.py` | 8D 문제해결 리포트. 위 분석 결과를 D2·D4 의 근거로 연결 |
+
+### 8D — 찾아낸 이상을 조치로 잇습니다
+
+관리도와 분산분석은 "이상이 있다"까지만 말합니다. 현업에서는 그 다음이
+본 업무입니다. 누가 언제까지 무엇을 하고, 효과가 있었는지 어떻게 확인하고,
+다른 라인에 같은 문제가 없는지 누가 점검하는가.
+
+```bash
+python -m src.quality.run_eight_d
+```
+
+빈 양식이 아닙니다. D2 의 숫자와 D4 의 원인 후보를 사람이 적는 대신
+`report/` 에 저장된 분석 결과에서 읽어옵니다. 그래서 모든 문장에 출처가
+붙습니다.
+
+| 읽는 파일 | 쓰이는 곳 |
+| --- | --- |
+| `quality_machine_summary.csv` | D2 얼마나, D4 설비 간 차이 |
+| `quality_defect_rate_p_chart.csv` | D2 언제, D4 유출원인 |
+| `quality_anova.csv`, `quality_tukey_hsd.csv` | D4 인자별 유의성과 효과 크기 |
+| `quality_msa_variance_components.csv` | D4 측정 원인 배제 판단 |
+| `quality_stratified_rule_signals.csv` | 드리프트 사례 선정 |
+| `model_operating_points.csv` | D3 봉쇄조치의 선별 부하 |
+| `quality_capability.csv` | D6 효과 확인 기준선 |
+
+**발생원인과 유출원인을 나눕니다.** 형식만 따라 하면 D4 에 원인을 하나만
+적고 끝냅니다. 정석은 두 갈래입니다.
+
+- 발생원인(occurrence): 왜 불량이 생겼나
+- 유출원인(escape): 왜 그걸 못 걸러냈나
+
+둘은 시정조치가 다릅니다. 발생원인을 없애도 검출 체계가 그대로면 다음
+불량도 똑같이 빠져나갑니다. 이 저장소의 사례에서 유출원인은 설비별 층별
+관리한계만 운영한 점입니다. 나쁜 설비의 나쁜 수준이 그 설비의 기준이 되면
+관리도는 영원히 관리 상태를 가리킵니다.
+
+**사례 선정을 사람에게 맡기지 않습니다.** 어디에 8D 를 열지 고르는 일
+자체에 편향이 들어갑니다. 눈에 띄는 설비, 최근 클레임이 있었던 설비가 먼저
+선택됩니다. 두 기준을 코드로 고정했습니다.
+
+1. 불량률이 전체 평균의 1.5배 이상인 설비
+2. Nelson 판정에서 CRITICAL 신호가 잡힌 파라미터 — 불량이 아직 터지지
+   않은 사례이고, 그쪽이 더 싸게 끝납니다
+
+**파라미터 이탈은 공차 대비로 순위를 매깁니다.** 절대값으로 줄을 세우면
+단위가 큰 파라미터가 항상 이깁니다. 공차 ±5 인 온도의 0.9 이탈보다
+공차 ±1 인 압력의 0.22 이탈이 공정에는 위험합니다. 기준선도 다른 설비의
+평균이 아니라 규격 중심으로 잡습니다. 설비가 셋뿐인데 하나가 드리프트
+중이면 기준선이 그쪽으로 끌려가 멀쩡한 설비가 이상해 보입니다.
+
+**하지 않은 것을 했다고 적지 않습니다.** D5 이후는 사람이 현장에서 실행해야
+하는 단계입니다. 코드가 만들 수 있는 것은 '무엇을 목표로 어떻게 검증할지'
+까지이고 '했더니 좋아졌다'는 결과가 아닙니다. 그래서 조치는 전부 미착수로
+시작하고, D6 효과 확인은 현재 데이터를 매번 다시 계산해 기준선과 비교합니다.
+조치 전이면 차이가 0 으로 나오며, 그것이 정확한 표시입니다. 확인하지 못한
+원인은 '미확인'으로 남기고 미해결 항목에 모읍니다.
 
 ### 용어를 구분합니다
 
@@ -216,11 +276,17 @@ python -m pytest -q
 python -m src.investigation.evaluate_scenarios
 ```
 
-품질 분석 모듈은 `tests/test_quality_*.py` 5개 파일에서 검증합니다.
+품질 분석 모듈은 `tests/test_quality_*.py` 6개 파일에서 검증합니다.
 ANOVA 와 Tukey HSD 는 `scipy.stats.f_oneway`, `scipy.stats.tukey_hsd`,
 `scipy.stats.levene` 의 결과와 대조하고, Gage R&R 은 제곱합 분해 항등식과
 분산 성분 회수로 확인하며, Nelson 판정 규칙은 규칙별 발동/미발동 데이터와
 몬테카를로 오경보율로 검증합니다.
+
+8D 는 통계 계산이 아니라 문서 생성이라 검증 방향이 다릅니다. 숫자가 맞는지
+보다 거짓을 말하지 않는지를 봅니다. 실행하지 않은 조치가 완료로 표시되지
+않는지, 확인하지 않은 원인이 확인됨으로 표시되지 않는지, 분석 결과에 없는
+숫자를 지어내지 않는지, 단위가 다른 파라미터를 절대값으로 비교하지 않는지를
+검증합니다.
 
 합성 데이터 검증 결과는 `docs/predictive_validation.json`에 수록했습니다. 모델의 실공정 정확도나 인과성을 주장하지 않습니다. 기존 통계·ML 학습용 화면은 별도 모드로 보존했습니다.
 

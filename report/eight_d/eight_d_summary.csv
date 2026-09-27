@@ -1,0 +1,3 @@
+﻿case_id,title,opened_on,severity,analysis_complete,confirmed_causes,unverified_causes,open_questions,pending_stages
+8D-PRESS_02-DEFECT-RATE,PRESS_02 박리 불량률 상승,2026-09-27,중대,True,3,2,4,"D0, D3, D5, D6, D7, D8"
+8D-PRESS_03-CURE_TEMP-DRIFT,PRESS_03 Cure_Temp 드리프트,2026-09-27,예방,True,1,2,2,"D0, D3, D5, D6, D7, D8"

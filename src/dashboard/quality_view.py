@@ -11,6 +11,7 @@ src/quality 의 분석 결과를 화면으로 보여준다.
 3. 설비 비교    일원분산분석 -> Tukey HSD 신뢰구간
 4. 측정시스템   Gage R&R 분산 성분, 작업자별 산포
 5. 모델 운전점  검출률을 올릴 때 과검이 늘어나는 정도
+6. 8D 리포트    찾아낸 이상을 조치로 잇는 8단계 문제해결
 """
 
 from pathlib import Path
@@ -19,6 +20,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
+from src.dashboard.eight_d_view import show_eight_d
 from src.process_spec import (
     CAPABILITY_CHARACTERISTICS,
     MACHINES,
@@ -210,7 +212,7 @@ def show_capability(dataframe: pd.DataFrame) -> None:
         columns=["항목", "값"],
     )
 
-    st.dataframe(detail, use_container_width=True, hide_index=True)
+    st.dataframe(detail, width="stretch", hide_index=True)
 
 
 def _render_capability_histogram(
@@ -265,7 +267,7 @@ def _render_capability_histogram(
     axes.legend(loc="upper right")
 
     figure.tight_layout()
-    st.pyplot(figure, use_container_width=True)
+    st.pyplot(figure, width="stretch")
 
 
 # =====================================================================
@@ -471,7 +473,7 @@ def _render_individual_chart(
     axes.margins(x=0.02)
 
     figure.tight_layout()
-    st.pyplot(figure, use_container_width=True)
+    st.pyplot(figure, width="stretch")
 
     st.caption(
         "붉은 음영은 판정 규칙 위반 구간입니다. "
@@ -516,7 +518,7 @@ def _render_moving_range_chart(
     axes.set_ylabel("이동범위")
 
     figure.tight_layout()
-    st.pyplot(figure, use_container_width=True)
+    st.pyplot(figure, width="stretch")
 
     st.caption(
         "이동범위 관리도는 산포의 변화를 본다. "
@@ -576,7 +578,7 @@ def _render_rule_table(
 
     st.dataframe(
         table,
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
     )
 
@@ -719,7 +721,7 @@ def show_defect_rate_chart(dataframe: pd.DataFrame) -> None:
     axes.legend(loc="upper right")
 
     figure.tight_layout()
-    st.pyplot(figure, use_container_width=True)
+    st.pyplot(figure, width="stretch")
 
 
 # =====================================================================
@@ -813,7 +815,7 @@ def show_factor_comparison(dataframe: pd.DataFrame) -> None:
 
     st.dataframe(
         summary.round(4),
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
     )
 
@@ -915,7 +917,7 @@ def _render_tukey(
     axes.margins(x=0.22)
 
     figure.tight_layout()
-    st.pyplot(figure, use_container_width=True)
+    st.pyplot(figure, width="stretch")
 
     st.caption(
         "신뢰구간이 0(세로 점선)을 넘지 않으면 두 수준의 평균이 "
@@ -937,7 +939,7 @@ def _render_tukey(
         ]
     )
 
-    st.dataframe(table, use_container_width=True, hide_index=True)
+    st.dataframe(table, width="stretch", hide_index=True)
 
 
 # =====================================================================
@@ -1022,7 +1024,7 @@ def show_measurement_system() -> None:
         anova_table.columns = ["요인", "자유도", "제곱합", "평균제곱"]
         st.dataframe(
             anova_table.round(6),
-            use_container_width=True,
+            width="stretch",
             hide_index=True,
         )
 
@@ -1090,7 +1092,7 @@ def _render_variance_components(result) -> None:
     axes.margins(x=0.14)
 
     figure.tight_layout()
-    st.pyplot(figure, use_container_width=True)
+    st.pyplot(figure, width="stretch")
 
     st.caption(
         "측정시스템(GRR)이 10% 미만이면 적합, 10~30%는 조건부 적합, "
@@ -1143,7 +1145,7 @@ def _render_operator_spread(
     axes.legend(title="작업자", loc="best", title_fontsize=8)
 
     figure.tight_layout()
-    st.pyplot(figure, use_container_width=True)
+    st.pyplot(figure, width="stretch")
 
     st.caption(
         "선들이 나란하면 작업자 간 편향만 있는 것이고, "
@@ -1238,7 +1240,7 @@ def _render_bias(bias_path: Path, characteristic: str) -> None:
     axes.legend(loc="upper left")
 
     figure.tight_layout()
-    st.pyplot(figure, use_container_width=True)
+    st.pyplot(figure, width="stretch")
 
 
 # =====================================================================
@@ -1298,7 +1300,7 @@ def show_operating_points() -> None:
         }
     )
 
-    st.dataframe(table, use_container_width=True, hide_index=True)
+    st.dataframe(table, width="stretch", hide_index=True)
 
     st.caption(
         "과검은 정상 LOT 을 불량으로 의심해 재검사 공수가 드는 것이고, "
@@ -1361,7 +1363,7 @@ def _render_model_comparison(comparison: pd.DataFrame) -> None:
                 display[column] = (display[column] * 100).round(1)
 
         st.dataframe(
-            display, use_container_width=True, hide_index=True
+            display, width="stretch", hide_index=True
         )
 
 
@@ -1409,7 +1411,7 @@ def _render_operating_curve(operating_points: pd.DataFrame) -> None:
     axes.margins(x=0.10, y=0.18)
 
     figure.tight_layout()
-    st.pyplot(figure, use_container_width=True)
+    st.pyplot(figure, width="stretch")
 
 
 # =====================================================================
@@ -1432,6 +1434,7 @@ def show_quality_analysis(dataframe: pd.DataFrame) -> None:
         comparison_tab,
         msa_tab,
         model_tab,
+        eight_d_tab,
     ) = st.tabs(
         [
             "공정능력",
@@ -1439,6 +1442,7 @@ def show_quality_analysis(dataframe: pd.DataFrame) -> None:
             "설비 비교",
             "측정시스템",
             "모델 운전점",
+            "8D 리포트",
         ]
     )
 
@@ -1458,3 +1462,6 @@ def show_quality_analysis(dataframe: pd.DataFrame) -> None:
 
     with model_tab:
         show_operating_points()
+
+    with eight_d_tab:
+        show_eight_d(dataframe)

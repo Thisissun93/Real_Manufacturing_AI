@@ -172,7 +172,7 @@ def show_defect_summary(df: pd.DataFrame) -> None:
 
     st.dataframe(
         defect_counts,
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
     )
 
@@ -205,7 +205,7 @@ def show_machine_summary(df: pd.DataFrame) -> None:
 
     st.dataframe(
         machine_summary.round(3),
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
     )
 
@@ -222,7 +222,7 @@ def show_correlation(df: pd.DataFrame) -> None:
 
     st.dataframe(
         correlation.round(3),
-        use_container_width=True,
+        width="stretch",
     )
 
 
@@ -295,7 +295,7 @@ def show_defect_prediction() -> None:
 
         submitted = st.form_submit_button(
             "Predict Defect",
-            use_container_width=True,
+            width="stretch",
         )
 
     if not submitted:
@@ -358,7 +358,7 @@ def show_defect_prediction() -> None:
 
     st.dataframe(
         probability_df.round(3),
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
     )
 
@@ -460,13 +460,13 @@ def show_batch_prediction() -> None:
 
     st.dataframe(
         upload_df.head(20),
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
     )
 
     if not st.button(
         "Run Batch Prediction",
-        use_container_width=True,
+        width="stretch",
     ):
         return
 
@@ -510,7 +510,7 @@ def show_batch_prediction() -> None:
 
     st.dataframe(
         result_df,
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
         height=500,
     )
@@ -525,7 +525,7 @@ def show_batch_prediction() -> None:
         data=csv_data,
         file_name="batch_prediction_result.csv",
         mime="text/csv",
-        use_container_width=True,
+        width="stretch",
     )
 
 
@@ -538,7 +538,7 @@ def show_lot_detail(df: pd.DataFrame) -> None:
 
     st.dataframe(
         df,
-        use_container_width=True,
+        width="stretch",
         height=400,
     )
 

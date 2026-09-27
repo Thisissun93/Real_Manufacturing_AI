@@ -60,7 +60,7 @@ def main() -> None:
 
     if st.button(
         "Generate PDF Report",
-        use_container_width=True,
+        width="stretch",
         type="primary",
     ):
         with st.spinner("PDF 보고서를 생성하고 있습니다."):
@@ -80,7 +80,7 @@ def main() -> None:
             data=pdf_data,
             file_name=pdf_path.name,
             mime="application/pdf",
-            use_container_width=True,
+            width="stretch",
         )
 
         st.info(f"저장 위치: {pdf_path}")
@@ -97,7 +97,7 @@ def main() -> None:
 
         st.dataframe(
             {"Generated Files": report_files},
-            use_container_width=True,
+            width="stretch",
             hide_index=True,
         )
 
