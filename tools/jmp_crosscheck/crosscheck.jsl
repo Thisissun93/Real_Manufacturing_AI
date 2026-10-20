@@ -1,0 +1,196 @@
+// ============================================================================
+// Real_Manufacturing_AI  -  JMP 교차검증 스크립트
+//
+// 같은 합성 CSV 로 JMP 표준 플랫폼을 돌려, src/quality 의 Python 결과와
+// 비교할 수치를 jmp_dump.csv 로 내보낸다.
+//   1) Oneway        : ANOVA, 등분산 검정(Brown-Forsythe/Levene), Welch, Tukey-Kramer
+//   2) Process Capability : Cp/Cpk/Pp/Ppk (Within = 평균 이동범위)
+//   3) Variability Chart  : Gauge R&R (Crossed, ANOVA)
+//   4) Bias              : Bias 의 t 검정, 측정값~기준값 회귀
+//   5) Control Chart Builder : 설비별 I-MR 관리한계
+//
+// 사용법: 이 파일과 Data 폴더의 CSV 3개를 같은 폴더에 두고 JMP 에서 실행(Ctrl+R).
+//         Gauge R&R 단계에서 MSA 공차 확인 창이 뜨면 OK(공차 30~34 미리 입력됨).
+// 결과: jmp_dump.csv (수치 전체), jmp_*.png (대표 리포트 캡처)
+// ============================================================================
+Names Default To Here( 1 );
+
+dir = Get Default Directory();
+If( !Is File( dir || "process_monitoring_data.csv" ),
+	dir = Pick Directory( "CSV 3개가 있는 폴더를 선택하세요" )
+);
+
+// 이전 실행에서 남은 표 정리
+For Each( {nm}, {"jmp_dump", "process_monitoring_data", "msa_gage_rnr_data", "msa_bias_study_data"},
+	Try( Close( Data Table( nm ), No Save ) )
+);
+
+// README 용으로 PNG 를 저장할 리포트
+snapshot_sections = {"ANOVA|Press2_Pressure", "Capability", "GageRR", "Linearity", "IMR|PRESS_03|Cure_Temp"};
+
+// ---------------------------------------------------------------- 결과 저장소
+dump = New Table( "jmp_dump",
+	Invisible,
+	New Column( "section", Character ),
+	New Column( "outline", Character ),
+	New Column( "column", Character ),
+	New Column( "row", Character ),
+	New Column( "value", Numeric, "Continuous", Format( "Best", 22 ) )
+);
+
+// 리포트 안의 모든 숫자 열(NumberColBox)을 (outline, 열 제목, 행 이름, 값) 으로 펼친다.
+// 플랫폼별 리포트 구조를 하드코딩하지 않으므로 JMP 버전이 달라도 동작한다.
+flatten = Function( {rpt, section},
+	{ncbs, nb, head, vals, par, labs, scbs, col, c, ttl, p, i, j, r, lab},
+	ncbs = rpt << XPath( "//NumberColBox" );
+	For( i = 1, i <= N Items( ncbs ), i++,
+		nb = ncbs[i];
+		head = nb << Get Heading;
+		vals = nb << Get;
+		If( !Is Matrix( vals ), vals = Matrix( vals ) );
+		// 행 이름: 같은 TableBox 의 첫 StringColBox
+		// 행 이름: 같은 TableBox 의 문자 열(StringColBox)을 모두 이어 붙인다.
+		// (Tukey 표처럼 "Level", "- Level" 두 열로 행을 구분하는 경우)
+		labs = {};
+		par = nb << Parent;
+		While( !Is Empty( par ) & (par << Class Name) != "TableBox",
+			par = par << Parent
+		);
+		If( !Is Empty( par ),
+			scbs = par << XPath( "//StringColBox" );
+			For( c = 1, c <= N Items( scbs ), c++,
+				col = scbs[c] << Get;
+				For( j = 1, j <= N Items( col ), j++,
+					If( c == 1, Insert Into( labs, col[j] ), labs[j] = labs[j] || " | " || col[j] )
+				);
+			);
+		);
+		// outline 경로 (By 그룹 제목 포함)
+		ttl = "";
+		p = nb << Parent;
+		While( !Is Empty( p ),
+			If( (p << Class Name) == "OutlineBox",
+				ttl = (p << Get Title) || If( ttl == "", "", " > " || ttl )
+			);
+			p = p << Parent;
+		);
+		For( j = 1, j <= N Row( vals ), j++,
+			lab = If( j <= N Items( labs ), labs[j], Char( j ) );
+			dump << Add Rows( 1 );
+			r = N Rows( dump );
+			dump:section[r] = section;
+			dump:outline[r] = ttl;
+			dump:column[r] = head;
+			dump:row[r] = lab;
+			dump:value[r] = vals[j];
+		);
+	);
+);
+
+finish = Function( {plat, section},
+	{rpt},
+	If( Is List( plat ), plat = plat[1] );
+	Try(
+		rpt = plat << Report;
+		flatten( rpt, section );
+		// README 용 캡처: 대표 리포트만 PNG 로 저장
+		If( Contains( snapshot_sections, section ),
+			rpt << Save Picture( dir || "jmp_" || Substitute( section, "|", "_" ) || ".png", "png" )
+		);
+		rpt << Close Window;
+	,
+		Write( "\n[교차검증] 리포트 추출 실패: " || section || " / " || Char( exception_msg ) )
+	);
+);
+
+// ============================================================================
+// 1. 설비 간 비교 : Oneway
+// ============================================================================
+dt = Open( dir || "process_monitoring_data.csv", Invisible );
+responses = {"Peel_Strength", "ABF_Roughness", "Total_Thickness",
+"Press2_Temp", "Press2_Pressure", "Cure_Temp"};
+
+For( k = 1, k <= N Items( responses ), k++,
+	ow = dt << Oneway(
+		Y( Column( dt, responses[k] ) ),
+		X( :Machine ),
+		Means( 1 ),
+		UnEqual Variances( 1 ),
+		All Pairs( 1, Ordered Differences Report( 1 ) )
+	);
+	finish( ow, "ANOVA|" || responses[k] );
+);
+
+// ============================================================================
+// 2. 공정능력 : 규격은 src/process_spec.py 와 동일
+// ============================================================================
+Column( dt, "CZ_Roughness" ) << Set Property( "Spec Limits", {LSL( 320 ), USL( 380 ), Target( 350 ), Show Limits( 0 )} );
+Column( dt, "Peel_Strength" ) << Set Property( "Spec Limits", {LSL( 400 ), Target( 500 ), Show Limits( 0 )} );
+Column( dt, "ABF_Roughness" ) << Set Property( "Spec Limits", {LSL( 300 ), USL( 400 ), Target( 350 ), Show Limits( 0 )} );
+Column( dt, "Total_Thickness" ) << Set Property( "Spec Limits", {LSL( 30 ), USL( 34 ), Target( 32 ), Show Limits( 0 )} );
+
+pc = dt << Process Capability(
+	Process Variables( :CZ_Roughness, :Peel_Strength, :ABF_Roughness, :Total_Thickness ),
+	Moving Range Method( Average of Moving Ranges ),
+	Individual Detail Reports( 1 ),
+	Capability Box Plots( 0 ),
+	Goal Plot( 0 ),
+	Capability Index Plot( 0 )
+);
+finish( pc, "Capability" );
+
+// ============================================================================
+// 3. Gauge R&R : 시료 10 x 작업자 3 x 반복 3, Crossed
+// ============================================================================
+dg = Open( dir || "msa_gage_rnr_data.csv", Invisible );
+Column( dg, "Total_Thickness" ) << Set Property( "Spec Limits", {LSL( 30 ), USL( 34 ), Target( 32 ), Show Limits( 0 )} );
+vc = dg << Variability Chart(
+	Y( :Total_Thickness ),
+	X( :Operator, :Part ),
+	Model( "Crossed" ),
+	Analysis Type( "ANOVA" ),
+	Variance Components( 1 ),
+	Gauge RR( 6 )   // k=6 시그마, 공차는 Spec Limits(30~34) 사용
+);
+finish( vc, "GageRR" );
+
+// ============================================================================
+// 4. 편향 · 선형성
+// ============================================================================
+db = Open( dir || "msa_bias_study_data.csv", Invisible );
+db << New Column( "Bias_um", Numeric, "Continuous", Formula( :Total_Thickness - :Reference ) );
+db << Run Formulas;
+// 절편만 있는 모형 = 1표본 t 검정 (H0: 평균 편향 = 0)
+fm = db << Fit Model( Y( :Bias_um ), Effects(), Personality( "Standard Least Squares" ), Emphasis( "Minimal Report" ), Run );
+finish( fm, "Bias" );
+biv = db << Bivariate( Y( :Total_Thickness ), X( :Reference ), Fit Line( 1 ) );
+finish( biv, "Linearity" );
+
+// ============================================================================
+// 5. 설비별 I-MR 관리한계
+// ============================================================================
+imr_params = {"Press2_Pressure", "Press2_Temp", "Cure_Temp"};
+machines = {"PRESS_01", "PRESS_02", "PRESS_03"};
+For( k = 1, k <= N Items( imr_params ), k++,
+	For( m = 1, m <= N Items( machines ), m++,
+		mname = machines[m];
+		ccb = dt << Control Chart Builder(
+			Show Control Panel( 0 ),
+			Variables( Y( Column( dt, imr_params[k] ) ) ),
+			Chart( Position( 1 ), Limits( Sigma( "Moving Range" ) ) ),
+			Chart( Position( 2 ), Limits( Sigma( "Moving Range" ) ) ),
+			Where( :Machine == mname )
+		);
+		finish( ccb, "IMR|" || mname || "|" || imr_params[k] );
+	)
+);
+
+// ============================================================================
+// 저장
+// ============================================================================
+dump << Save( dir || "jmp_dump.csv" );
+Close( dt, No Save );
+Close( dg, No Save );
+Close( db, No Save );
+Show( N Rows( dump ) );
+Caption( "완료: jmp_dump.csv " || Char( N Rows( dump ) ) || "행 저장" );

@@ -249,6 +249,13 @@ AIAG MSA 4판의 ANOVA 법을 씁니다. 범위법보다 정확하고 부품과 
 `models/random_forest_defect_model.joblib` 에는 모델과 함께 판정 임계값을
 저장합니다. 임계값을 분리해 두면 추론 시점에 0.5 가 다시 쓰입니다.
 
+### JMP 교차검증
+
+같은 합성 데이터를 JMP 19 표준 플랫폼(Oneway, Process Capability, Variability Gauge R&R, Fit Model, Control Chart Builder)에 넣어
+ANOVA·Tukey·Cp/Cpk·Gage R&R·편향·I-MR 관리한계 164개 항목을 대조했고, 모두 일치했습니다.
+최대 차이 0.034% 는 d2 상수(표 값 1.128 대 이론값 1.12838) 때문으로 확인했습니다.
+자세한 내용과 재현 방법: [docs/jmp_crosscheck.md](docs/jmp_crosscheck.md)
+
 ## 데이터 생성기
 
 `src/data/generate_process_data.py` 는 다음 구조를 의도적으로 심습니다.
