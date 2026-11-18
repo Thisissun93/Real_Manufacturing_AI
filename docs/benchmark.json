@@ -1,0 +1,112 @@
+{
+  "seed": 721,
+  "lots": 120,
+  "lots_with_failures": 33,
+  "seconds_median": 0.7245351284999515,
+  "seconds_p95": 0.8334840319998875,
+  "seconds_total": 88.21529539599942,
+  "per_lot_median": {
+    "runs": 10.0,
+    "aoi": 1600.0,
+    "related": 74.0,
+    "signals": 7.0,
+    "candidates": 4.0
+  },
+  "per_lot_max": {
+    "runs": 10,
+    "aoi": 1600,
+    "related": 75,
+    "signals": 7,
+    "candidates": 4
+  },
+  "scenario_passed": 27,
+  "scenario_total": 27,
+  "scenario_cases": 9,
+  "example": {
+    "lot": "DEMO-0046",
+    "summary": {
+      "inspected": 1600,
+      "failed": 268,
+      "abf_first": 268,
+      "other_first_abf_unknown": 0,
+      "defect_rate": 0.1675,
+      "abf_first_rate": 0.1675
+    },
+    "signals": [
+      {
+        "step": "CZ",
+        "factor": "Cu 시편 무게 감소 정규화 지수",
+        "value": 0.6766120000000342,
+        "lower": 0.55,
+        "upper": 0.85,
+        "status": "WITHIN"
+      },
+      {
+        "step": "CZ",
+        "factor": "순수 저항계 표시값",
+        "value": 1.849,
+        "lower": 1,
+        "upper": null,
+        "status": "WITHIN"
+      },
+      {
+        "step": "PREBAKE",
+        "factor": "제품 온도프로파일 기준대비 최대 편차",
+        "value": 0.12,
+        "lower": null,
+        "upper": 4,
+        "status": "WITHIN"
+      },
+      {
+        "step": "LAMINATION",
+        "factor": "압력 설정 대비 실측 편차",
+        "value": 0.7873624739411174,
+        "lower": -4,
+        "upper": 4,
+        "status": "WITHIN"
+      },
+      {
+        "step": "LAMINATION",
+        "factor": "밀착 유지시간 설정 대비 실측 편차",
+        "value": 0.2,
+        "lower": -5,
+        "upper": 5,
+        "status": "WITHIN"
+      },
+      {
+        "step": "CURE",
+        "factor": "제품 온도프로파일 기준대비 최대 편차",
+        "value": 8.12,
+        "lower": null,
+        "upper": 4,
+        "status": "OUTSIDE"
+      },
+      {
+        "step": "HIGH_BAKE",
+        "factor": "제품 온도프로파일 기준대비 최대 편차",
+        "value": 9.0,
+        "lower": null,
+        "upper": 4,
+        "status": "OUTSIDE"
+      }
+    ],
+    "candidates": [
+      {
+        "candidate": "약액 상태 또는 계측 이상",
+        "state": "현재 등록값에서 이탈 근거 없음"
+      },
+      {
+        "candidate": "적층 조건 또는 자재 상태",
+        "state": "현재 등록값에서 이탈 근거 없음"
+      },
+      {
+        "candidate": "열처리 조건 또는 온도 전달 차이",
+        "state": "우선 확인"
+      },
+      {
+        "candidate": "자재 공유 이력",
+        "state": "우선 확인"
+      }
+    ]
+  }
+}
