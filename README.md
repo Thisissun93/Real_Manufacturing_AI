@@ -3,6 +3,12 @@
 [![앱 바로 실행](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://realmanufacturingai-gqmhke2ybcjhdrsndjsh2e.streamlit.app/)
 [![검증](https://github.com/Thisissun93/Real_Manufacturing_AI/actions/workflows/manufacturing._ai.yml/badge.svg)](https://github.com/Thisissun93/Real_Manufacturing_AI/actions/workflows/manufacturing._ai.yml)
 
+> **English summary** — Investigation app for ABF build-up (FC-BGA substrate) manufacturing. Enter one LOT ID, and it collects process history, temperature profiles and AOI defect maps, marks out-of-limit conditions, and suggests which causes to check first. It continues to verification tests and an 8D report.
+>
+> - **Result:** For one lot, it compares 10 equipment runs, 1,600 AOI units and 74 similar lots, and gives 4 cause candidates in about 0.7 seconds. 27 of 27 test scenarios give the expected direction. ([benchmark](docs/BENCHMARK.md))
+> - **Check:** 164 statistics (ANOVA, Tukey, Cp/Cpk, Gage R&R, I-MR) match JMP 19 results. 295 tests run in CI. ([JMP check](docs/jmp_crosscheck.md))
+> - All data is synthetic. The numbers check the method and the calculations, not accuracy in a real factory.
+
 제작자: 김태양. ABF 제조 이력 조사·통계·예방보전 검토를 연결하는 공개용 합성 데이터 시연 프로그램입니다. 실제 제조사·장비 형식과 사내 양산 정보를 포함하지 않습니다.
 
 ## 한눈에 보기
