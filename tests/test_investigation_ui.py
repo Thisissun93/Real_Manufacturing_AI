@@ -20,11 +20,13 @@ def test_investigation_navigation_and_review_gate():
     assert not app.exception
     assert app.metric[0].value == '1600'
     state = next(s for s in app.selectbox if s.label == '검토 상태')
-    state.select('검증 완료').run()
+    # 폼 안의 위젯은 제출 전에 다시 실행하면 값이 반영되지 않으므로
+    # 선택 후 바로 제출합니다(Streamlit 1.6x AppTest 동작).
+    state.select('검증 완료')
     next(b for b in app.button if b.label == '검토 기록 추가').click().run()
     assert any('담당자' in e.value for e in app.error)
     assert app.session_state['investigation_reviews'] == []
-    next(s for s in app.selectbox if s.label == '검토 상태').select('진행 중').run()
+    next(s for s in app.selectbox if s.label == '검토 상태').select('진행 중')
     next(t for t in app.text_input if t.label == '담당자').input('UI TEST')
     next(b for b in app.button if b.label == '검토 기록 추가').click().run()
     assert len(app.session_state['investigation_reviews']) == 1

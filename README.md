@@ -1,8 +1,22 @@
 # Real Manufacturing Intelligence — Ver1.0
 
 [![앱 바로 실행](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://realmanufacturingai-gqmhke2ybcjhdrsndjsh2e.streamlit.app/)
+[![검증](https://github.com/Thisissun93/Real_Manufacturing_AI/actions/workflows/manufacturing._ai.yml/badge.svg)](https://github.com/Thisissun93/Real_Manufacturing_AI/actions/workflows/manufacturing._ai.yml)
 
 제작자: 김태양. ABF 제조 이력 조사·통계·예방보전 검토를 연결하는 공개용 합성 데이터 시연 프로그램입니다. 실제 제조사·장비 형식과 사내 양산 정보를 포함하지 않습니다.
+
+## 한눈에 보기
+
+**어떤 일을 돕나요?** 불량 LOT이 나오면 엔지니어는 약액·적층·열처리 이력, AOI 결과, 같은 조건의 다른 LOT을 하나씩 찾아 비교합니다. 이 앱은 LOT ID 하나로 그 자료를 모아 기준 이탈을 표시하고, 원인 후보를 "우선 확인 / 이탈 근거 없음"으로 나눠 확인시험 순서를 제안합니다. 확인시험 결과와 8D 보고서까지 같은 화면에서 이어집니다.
+
+| 측정·검증 | 결과 | 근거 |
+|---|---|---|
+| LOT 하나 조사 | 설비 Run 10건, AOI 1,600 유닛, 동일 조건 LOT 74개를 대조해 원인 후보 4개까지 **약 0.7초** | [docs/BENCHMARK.md](docs/BENCHMARK.md) |
+| 원인 후보 방향 | 원인 유형 9종 × 난수 조건 3종, **27/27 통과** | [docs/scenario_validation.json](docs/scenario_validation.json) |
+| 통계 계산 | JMP 19 표준 플랫폼과 **164개 항목 일치** (최대 차이 0.034%, d2 상수 반올림) | [docs/jmp_crosscheck.md](docs/jmp_crosscheck.md) |
+| 자동 테스트 | pytest 295개, 푸시마다 CI 실행 | `.github/workflows/` |
+
+**주장하지 않는 것:** 데이터는 합성 데이터입니다. 위 수치는 절차와 계산이 맞는지에 대한 검증이며, 실제 공정에서의 원인 진단 정확도나 수작업 대비 시간 단축을 측정한 것이 아닙니다. 원인 확정과 조치 판단은 엔지니어가 확인시험으로 합니다.
 
 ## 시작하기
 
@@ -279,6 +293,7 @@ ANOVA·Tukey·Cp/Cpk·Gage R&R·편향·I-MR 관리한계 164개 항목을 대�
 ```bash
 python -m pytest -q
 python -m src.investigation.evaluate_scenarios
+python -m src.investigation.benchmark   # 업무 시나리오 측정, docs/BENCHMARK.md 갱신
 ```
 
 품질 분석 모듈은 `tests/test_quality_*.py` 6개 파일에서 검증합니다.
